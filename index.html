@@ -227,6 +227,72 @@ body.shownotes #notes{display:block}
 <div class="memo"><span><b>7장</b></span><span><b>담당</b> 김민주</span><span><b>레퍼런스</b> 버스 중앙차로 2쪽 (용어 박스), 5쪽 (공간적 범위: 지도)</span><span><b>채울 것</b> 1.15배와 상위 5곳의 근거 한 줄</span></div>
 <aside class="notes">발표에서 쓰는 용어와 분석 범위입니다. 혼잡도는 승객을 열차 수와 정원의 곱으로 나눈 값이고, 100%가 정원입니다. 병목은 평일 8시 칸 혼잡도가 130% 이상인 구간으로, 2026년 9월 기준 22개입니다. 병목이 이어진 묶음 6개를 병목 통로, 통로를 지나는 승객의 출발역과 도착역 중 더 몰린 쪽을 병목의 손잡이라고 부릅니다. 평균 혼잡도는 출근자가 지나는 구간의 혼잡도를 시간으로 가중 평균한 값, 유입/유출 비는 그 구로 들어오는 통행을 나가는 통행으로 나눈 값입니다. 과밀 분은 정원을 넘은 정도에 통과 시간을 곱해 더한 값, 순효과는 떠난 칸과 옮겨 간 칸을 합친 변화입니다. 계산의 바탕은 승객은 혼잡도 곱하기 열차 수에 비례한다는 관계입니다. 범위는 평일 아침 7시부터 9시 30분까지 30분 칸 여섯 개, 수도권 21개 노선의 역 619개이고, 혼잡도는 1~8호선 구간에 있습니다. 지도의 진한 선이 혼잡도가 있는 1~8호선, 주황색이 병목 22개입니다. 규모는 아침 통행 약 214만 건입니다. (1:10)</aside>
 </section>
+<!-- ===== 순서도 (분석 프로세스 첫 장) ===== -->
+<style>
+.fc{display:grid;grid-template-columns:250px 170px 1fr;height:776px}
+.fc .bx{border:3px solid #c9d5e0;border-radius:28px}
+.fc-data{display:flex;flex-direction:column}
+.fc-data .bx{flex:1;padding:18px 16px;display:flex;flex-direction:column;justify-content:space-around}
+.fc-tag{background:#dde7f0;color:#2f4a66;font-weight:700;font-size:27px;text-align:center;padding:12px 6px;border-radius:12px;line-height:1.3}
+.fc-pre{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding-top:50px}
+.fc-circle{width:156px;height:156px;border-radius:50%;background:#5b7d9f;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;font-size:29px;line-height:1.3}
+.fc-note{font-size:22px;text-align:center;line-height:1.4;color:#2c3e52}
+.fc-note b{color:#2f4a66}
+.fc-ana{display:flex;flex-direction:column}
+.fc-ana .bx{flex:1;padding:18px 22px;display:grid;grid-template-columns:330px 1fr;gap:22px}
+.fc-start{display:flex;flex-direction:column;gap:12px;justify-content:center}
+.fc-q{background:#fbeee7;border-radius:16px;padding:16px;font-size:26px;line-height:1.4;text-align:center}
+.fc-q b{color:#c4501f}
+.fc-dn{text-align:center;color:#5b7d9f;font-size:28px;line-height:1}
+.fc-eq{background:#2f4a66;color:#fff;border-radius:16px;padding:18px 8px;text-align:center;font-weight:700;font-size:34px;line-height:1.3}
+.fc-eq .f{color:#9cc3ea}.fc-eq .c{color:#fbe9a8}
+.fc-eq small{display:block;font-size:20px;font-weight:400;margin-top:4px}
+.fc-q2{background:#e8edf2;border-radius:16px;padding:14px;font-size:26px;text-align:center}
+.fc-lanes{display:grid;grid-template-rows:auto 1fr 1fr 1fr;gap:12px}
+.fc-lh,.fc-lane{display:grid;grid-template-columns:170px 1fr 44px 1.25fr}
+.fc-lh div{font-size:23px;font-weight:700;color:#2f4a66;text-align:center;padding-bottom:4px;border-bottom:3px solid #5b7d9f}
+.fc-lh .x{border:none}
+.fc-lab{border-radius:16px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font-weight:700;font-size:32px;line-height:1.2;margin-right:12px;background:#dde7f0;color:#2f4a66}
+.fc-lab small{font-size:20px;margin-top:6px}
+.fc-cap .fc-lab{background:#fdf3d2;color:#7a5b00;border:3px solid #e2c044}
+.fc-how{border:2px solid #c9d5e0;border-radius:16px;font-size:25px;line-height:1.35;display:flex;align-items:center;justify-content:center;text-align:center;padding:6px 14px}
+.fc-cap .fc-how{border-color:#ead79a}
+.fc-ar{display:flex;align-items:center;justify-content:center;color:#5b7d9f;font-size:34px;font-weight:700}
+.fc-m{border:3px solid #5b7d9f;background:#f3f6f9;border-radius:16px;font-size:23px;line-height:1.4;display:flex;align-items:center;justify-content:center;text-align:center;padding:6px 14px}
+.fc-m b{color:#2f4a66}
+.fc-cap .fc-m{border-color:#e2c044;background:#fffaf0}
+.fc-cap .fc-m b{color:#7a5b00}
+</style>
+<section class="" data-no="8">
+<p class="lab">02. 분석 프로세스</p>
+<h2>순서도</h2>
+<div class="body"><div class="fc">
+<div class="fc-data"><p class="sub">데이터</p><div class="bx">
+<div class="fc-tag">구간별 혼잡도</div>
+<div class="fc-tag">어디서 어디로<br>몇 명 가나</div>
+<div class="fc-tag">시간대별<br>열차 수</div>
+<div class="fc-tag">동네별 집값</div>
+</div></div>
+<div class="fc-pre"><div class="fc-circle">노선도에<br>겹치기</div><div class="fc-note">출근 이동을<br><b>지하철<br>노선도 위에</b><br>겹쳐 그린다</div><div class="fc-ar">➜</div></div>
+<div class="fc-ana"><p class="sub">분석</p><div class="bx">
+<div class="fc-start">
+<div class="fc-q">8시 '지옥철'은<br>열차를 늘려 많이 줄었는데<br><b>출근길은 왜 아직 붐빌까?</b></div>
+<div class="fc-dn">▼</div>
+<div class="fc-eq">혼잡도 =<br><span class="f">타는 사람</span> ÷ <span class="c">자리</span><small>자리 = 열차 수 × 열차 정원</small></div>
+<div class="fc-dn">▼</div>
+<div class="fc-q2">세 가지를 따져 본다</div>
+</div>
+<div class="fc-lanes">
+<div class="fc-lh"><div class="x"></div><div>무엇을 묻나</div><div class="x"></div><div>이렇게 찾는다</div></div>
+<div class="fc-lane"><div class="fc-lab">어디서<small>타는 사람</small></div><div class="fc-how">사람이 어느 구간에<br>몰리나</div><div class="fc-ar">›</div><div class="fc-m"><span>출근 이동을 노선도에 얹어<br><b>구간마다 사람 수</b>를 더하고,<br>붐비는 구간을 이어 묶어<br>그 승객이 <b>탄 역</b>을 센다</span></div></div>
+<div class="fc-lane"><div class="fc-lab">누가<small>타는 사람</small></div><div class="fc-how">어느 동네 사람이<br>그 길목을 지나나</div><div class="fc-ar">›</div><div class="fc-m"><span>동네마다 출근길 구간의<br><b>혼잡도를 평균</b> 내고,<br><b>집값</b> · <b>드나드는 사람 수</b>와<br>견준다</span></div></div>
+<div class="fc-lane fc-cap"><div class="fc-lab">왜<small>열차</small></div><div class="fc-how">8시 · 9시에 열차가<br>몇 대 다니나</div><div class="fc-ar">›</div><div class="fc-m"><span>30분마다 혼잡을<br><b>타는 사람</b>과 <b>자리(열차 수)</b>로<br>쪼개고, 열차를 <b>늘린 노선</b>과<br><b>안 늘린 노선</b>을 비교한다</span></div></div>
+</div>
+</div></div>
+</div></div>
+<div class="memo"><span><b>순서도</b></span><span><b>담당</b> 김진현</span><span><b>레퍼런스</b> 구릉지 6쪽 (순서도)</span><span><b>채울 것</b> 없음</span></div>
+<aside class="notes"></aside>
+</section>
 <!-- ===== 8. 데이터 선정 및 가공 ===== -->
 <section class="" data-no="8">
 <p class="lab">02. 분석 프로세스</p>
