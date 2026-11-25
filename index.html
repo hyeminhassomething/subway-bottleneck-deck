@@ -708,24 +708,27 @@ body.shownotes #notes{display:block}
 .x16 .ev{position:absolute;left:0;top:620px;width:1728px;background:#eef4fc;padding:16px 24px;display:flex;align-items:baseline;gap:40px}
 .x16 .ev span{font-size:25px;color:#16324f}.x16 .ev b{font-size:30px}.x16 .ev .hot{color:#d9541e}
 .x16 .evn{position:absolute;left:0;top:700px;font-size:20px;color:#66727f;margin:0}
+
+.x16 td,.x16 p,.x16 span{word-break:keep-all;overflow-wrap:normal;text-wrap:balance}
+.x16 td small.sm{display:block;font-size:19px;color:#66727f;margin-top:4px}
 </style>
 <p class="lab">04. 결론 · 해결 방향</p>
 <h2>통로를 골라, 좁은 쪽 사람을, 열차가 남아 있는 칸으로 옮겨야 한다</h2><div class="tabs"><span class="on">어디에</span><span class="on">누구에게</span><span class="on">언제</span></div>
 <div class="body"><div class="x16">
 <table>
-<tr><th>축</th><th style="width:320px">앞 장의 결과</th><th>기존 해법이 닿지 못한 곳</th></tr>
-<tr><td class="ax">어디에<small>중시</small></td><td>혼잡은 서로 떨어진 통로 여섯 곳에 있다</td><td class="old"><b>증회</b>는 노선 단위, <b>시차 출근</b>은 서울 전체가 대상이다</td></tr>
-<tr><td class="ax">누구에게<small>거시</small></td><td>병목 구간마다 좁은 쪽이 다르다 (22곳 중 출발 쪽 14, 도착 쪽 6, 비슷 2)</td><td class="old"><b>시차 출근 인센티브</b>는 누구에게나 똑같이 준다</td></tr>
-<tr><td class="ax">언제<small>시간</small></td><td>09:00에 승객보다 열차가 먼저 빠진다</td><td class="old"><b>증회</b>는 08:00 정점 한 칸에만 넣었다 (09:00 칸 −0.4%p)</td></tr>
+<tr><th>축</th><th style="width:320px">질문의 답 (앞 장)</th><th>기존 해법이 닿지 못한 곳</th></tr>
+<tr><td class="ax">어디에<small>중시</small></td><td>혼잡은 서로 떨어진<br>통로 여섯 곳에 있다</td><td class="old"><b>증회</b>는 노선 단위,<br><b>시차 출근</b>은 서울 전체가 대상이다</td></tr>
+<tr><td class="ax">누구에게<small>거시</small></td><td>병목 구간마다<br>좁은 쪽이 다르다<small class="sm">22곳 중 출발 쪽 14, 도착 쪽 6, 비슷 2</small></td><td class="old"><b>시차 출근 인센티브</b>는<br>누구에게나 똑같이 준다</td></tr>
+<tr><td class="ax">언제<small>시간</small></td><td>09:00에 승객보다<br>열차가 먼저 빠진다</td><td class="old"><b>증회</b>는 08:00 정점 한 칸에만 넣었다<small class="sm">09:00 칸은 −0.4%p</small></td></tr>
 </table>
-<svg width="1728" height="620" viewBox="0 0 1728 620" fill="none" stroke="#2166c4" stroke-width="3" stroke-linecap="round">
-<defs><marker id="ah16" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2166c4" stroke="none"/></marker></defs>
-<path d="M910,138 C965,138 960,308 1008,308"/><path d="M910,308 L1008,308" marker-end="url(#ah16)"/><path d="M910,478 C965,478 960,308 1008,308"/>
-<path d="M1328,308 C1368,308 1356,176 1392,176" marker-end="url(#ah16)" stroke="#16324f"/><path d="M1328,308 C1368,308 1356,436 1392,436" marker-end="url(#ah16)" stroke="#16324f"/>
+<svg width="1728" height="620" viewBox="0 0 1728 620" fill="none" stroke="#16324f" stroke-width="1.5" stroke-linecap="square">
+<defs><marker id="a20" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,1 L10,5 L0,9 z" fill="#16324f" stroke="none"/></marker></defs>
+<path d="M912,138 H956 M912,478 H956 M956,138 V478"/><path d="M912,308 H1010" marker-end="url(#a20)"/>
+<path d="M1330,308 H1362 M1362,176 V436"/><path d="M1362,176 H1390" marker-end="url(#a20)"/><path d="M1362,436 H1390" marker-end="url(#a20)"/>
 </svg>
 <div class="cond"><p class="t">해법이 갖춰야 할 조건</p><p>통로를 골라서</p><p>좁은 쪽 사람을</p><p>열차가 남아 있는 칸으로</p></div>
-<div class="sol" style="top:62px"><p class="n">솔루션 1 · 열차 (어디에 + 언제)</p><p class="h">통로의 09:00 열차<br>감축을 늦춘다</p><p class="d">받는 칸을 먼저 연다. 30분당 평균 2.1대</p></div>
-<div class="sol" style="top:322px"><p class="n">솔루션 2 · 사람 (어디에 + 누구에게)</p><p class="h">통로마다 좁은 쪽 역<br>이용자를 옮긴다</p><p class="d">그다음에 사람을 옮긴다. 고르게 옮길 때의 2.1배</p></div>
+<div class="sol" style="top:62px"><p class="n">솔루션 1 · 열차 (어디에 + 언제)</p><p class="h">통로의 09:00 열차<br>감축을 늦춘다</p><p class="d">받는 칸을 먼저 연다.<br>30분당 평균 2.1대</p></div>
+<div class="sol" style="top:322px"><p class="n">솔루션 2 · 사람 (어디에 + 누구에게)</p><p class="h">통로마다 좁은 쪽 역<br>이용자를 옮긴다</p><p class="d">그다음에 사람을 옮긴다.<br>고르게 옮길 때의 2.1배</p></div>
 <div class="ev"><span>사람만 옮기면 <b>−11%</b></span><span>열차만 유지하면 <b>−8%</b></span><span>함께 하면 <b class="hot">−25%</b></span></div>
 <p class="evn">08:00 칸과 09:00 칸의 과밀 분 합계 변화. 통로 6곳 기준이고, 좁은 쪽 역 이용자의 15%가 09:00으로 옮긴다는 가정이다 (해외 실적 1.5~8%).</p>
 </div></div>
