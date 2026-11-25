@@ -92,7 +92,7 @@ body.shownotes #notes{display:block}
 <h2>CONTENTS</h2>
 <div class="body"><div class="toc">
 <div><p class="no">01</p><h3>연구 개요</h3><p>주제 선정 배경</p><p>문제 제기</p><p>연구 목적과 핵심 질문</p><p>선행연구와 분석 구조</p><p>용어와 기준 · 범위와 규모</p></div>
-<div><p class="no">02</p><h3>분석 프로세스</h3><p>데이터 선정 및 가공</p><p>네트워크 정의</p></div>
+<div><p class="no">02</p><h3>분석 프로세스</h3><p>데이터 선정 및 가공</p><p>데이터로 본 출근길 (EDA)</p><p>네트워크 정의</p></div>
 <div><p class="no">03</p><h3>분석 결과</h3><p>어디에: 구조 대 통행, 통로</p><p>누구에게: 손잡이, 집값 묶음</p><p>왜: 승객 대 열차</p></div>
 <div><p class="no">04</p><h3>결론</h3><p>최종 결과</p><p>해결 방향과 솔루션</p><p>기대효과 및 한계점</p><p>참고자료</p></div>
 </div></div>
@@ -305,8 +305,20 @@ body.shownotes #notes{display:block}
 <div class="memo"><span><b>8장</b></span><span><b>담당</b> 김민주</span><span><b>레퍼런스</b> 버스 중앙차로 7쪽 (데이터 수집 | 분석 과정, 매칭 화살표), N버스 6쪽 (자료 표)</span><span><b>채울 것</b> 검증용 자료(열차운행현황, 실시간 위치)와 한계는 대본·부록으로</span></div>
 <aside class="notes">자료와 가공 과정입니다. 왼쪽이 받은 자료 여섯 가지이고, 오른쪽이 가공 흐름입니다. 먼저 서울시 역별 OD는 하루 738만 건인데 시간대가 없습니다. 그래서 역쌍의 비율은 OD를 따르고, 역별 아침 승하차 총량에 맞도록 행과 열을 번갈아 200번 조정해 아침 통행 214만 건, 하루의 약 30%를 추정했습니다. 이 아침 통행을, 역을 노선별 노드로 나누고 환승에 5분을 넣은 운행망의 가장 빠른 경로에 실어 구간별 통행 수를 만들었습니다. 혼잡도는 역과 방향별 값이라서, 그 역에서 다음 역으로 가는 구간에 붙였고, 상선 방향은 노선마다 통행 부하와 가장 맞는 쪽으로 정했습니다. 시각표에서는 30분 칸마다 열차 수를 세어 용량을 만들었습니다. 이 둘을 합친 것이 구간과 30분 칸마다 승객, 혼잡도, 열차 수를 가진 분석용 자료입니다. 집값은 구별로 세 묶음으로 나눠 누구에게 분석에 씁니다. 한계로, 아침 통행은 추정값이고 9호선은 혼잡도 자료가 없어 노출이 낮게 잡혀 있습니다. (1:10)</aside>
 </section>
-<!-- ===== 9. 네트워크 정의 ===== -->
+<!-- ===== 9. EDA: 데이터로 본 출근길 ===== -->
 <section class="" data-no="9">
+<p class="lab">02. 분석 프로세스</p>
+<h2>출근길 혼잡은 08:00 칸에, 한 방향으로, 일부 구간에 몰린다</h2>
+<div class="body">
+<img class="fig" src="images/eda_commute.png" width="1700" height="595" alt="30분 칸별 130% 이상 역·방향 수, 아침 승차·하차가 많은 역의 시간대별 승하차, 08:00 칸 혼잡도 분포">
+<p class="note">(가)(라) 서울교통공사 혼잡도 2026-09 평일, 역·방향 557개. (나)(다) 1~8호선 평일 시간대별 승하차 2026-06 평균, 07~09시 승차와 하차 중 많은 쪽으로 역을 나눔(예: 까치산·신림 / 종각·시청·여의도). 회색 띠는 07~09시.</p>
+<div class="band" style="margin-top:16px;padding:16px 24px"><p style="margin:0">분석 설정: <b>평일 08:00 칸</b>(130% 이상 22개, 저녁 최대 14개) · <b>아침 승차역 → 하차역 방향의 통행</b> · <span class="hl">130% 이상 구간(3.9%)</span>을 병목으로</p></div>
+</div>
+<div class="memo"><span><b>9장</b></span><span><b>담당</b> 김민주</span><span><b>레퍼런스</b> 빅데이터캠퍼스 7~8쪽 (EDA, 지역별 승하차 선 그래프)</span><span><b>채울 것</b> 없음. 그림은 시각화 노트북 eda_commute 칸</span></div>
+<aside class="notes">분석에 들어가기 전에, 저희가 왜 평일 아침 8시, 한 방향의 흐름, 일부 구간을 보는지 데이터로 먼저 확인했습니다. 왼쪽은 하루 30분 칸마다 혼잡도 130%를 넘는 역과 방향의 수입니다. 아침 8시 칸이 22개로 가장 많고, 저녁은 많아야 14개입니다. 가운데 두 그래프는 아침에 타는 사람이 더 많은 역 166곳과, 내리는 사람이 더 많은 역 107곳의 하루 승하차입니다. 아침에는 까치산이나 신림 같은 역에서 타고, 종각, 시청, 여의도 같은 역에서 내리며, 저녁에는 정반대가 됩니다. 아침 통행은 한 방향으로 흐른다는 뜻입니다. 오른쪽은 8시 칸 혼잡도 분포입니다. 대부분은 100%보다 낮고, 130%를 넘는 곳은 557개 중 22개, 약 4%뿐입니다. 그래서 저희는 평일 8시 칸, 아침 출발역에서 도착역으로 가는 통행, 그리고 130% 이상 구간을 병목으로 두고 분석했습니다. (0:45)</aside>
+</section>
+<!-- ===== 10. 네트워크 정의 ===== -->
+<section class="" data-no="10">
 <p class="lab">02. 분석 프로세스</p>
 <h2>네트워크 정의</h2>
 <div class="body"><div class="row">
@@ -318,11 +330,11 @@ body.shownotes #notes{display:block}
 <div style="flex:1"><img class="fig" src="images/fig02_degree_ccdf.png" width="928" height="550" alt="degree와 가중 degree의 CCDF">
 <p class="key" style="margin-top:18px">선로는 고르고, 통행은 쏠려 있다</p><p class="s">degree 분포는 heavy-tailed가 아니다. 불균등은 연결이 아니라 가중치에 있고, 도착이 출발보다 더 쏠린다</p></div>
 </div></div>
-<div class="memo"><span><b>9장</b></span><span><b>담당</b> 네트워크 담당</span><span><b>레퍼런스</b> 구릉지 14쪽 (매개 중심성을 정의문과 작은 그림으로 먼저)</span><span><b>채울 것</b> 매개 중심성 설명 그림</span></div>
+<div class="memo"><span><b>10장</b></span><span><b>담당</b> 네트워크 담당</span><span><b>레퍼런스</b> 구릉지 14쪽 (매개 중심성을 정의문과 작은 그림으로 먼저)</span><span><b>채울 것</b> 매개 중심성 설명 그림</span></div>
 <aside class="notes">대본 자리. 담당자가 쓴다. 지금 대본은 구글 문서 「발표 종합 자료」 4부 4절에 있다.</aside>
 </section>
-<!-- ===== 10. 병목 위치는 구조가 아니라 통행이 정한다 ===== -->
-<section class="" data-no="10">
+<!-- ===== 11. 병목 위치는 구조가 아니라 통행이 정한다 ===== -->
+<section class="" data-no="11">
 <p class="lab">03. 분석 결과</p>
 <h2>병목 위치는 구조가 아니라 통행이 정한다</h2><div class="tabs"><span class="on">어디에</span><span>누구에게</span><span>왜</span></div>
 <div class="body"><div class="row">
@@ -334,11 +346,11 @@ body.shownotes #notes{display:block}
 <tr><td class="t">부하 ÷ 용량</td><td class="n"><span class="hl">0.86</span></td><td class="n">15개</td></tr></table>
 <div class="card" style="margin-top:22px"><p class="key">null model</p><p>역별 출발·도착 총량만 지키고 연결을 다시 나눈 망의 구간 부하가 실제와 순위상관 <b>0.98</b></p><p class="s">병목이 어디에 생기는지는 노드의 총량이 거의 다 정한다</p></div></div>
 </div></div>
-<div class="memo"><span><b>10장</b></span><span><b>담당</b> 결과 담당 (어디에)</span><span><b>레퍼런스</b> 버스 중앙차로 14쪽 (기존 기준 표와 본 연구 표, 차이만 강조), 17쪽 (좌우 대비)</span><span><b>채울 것</b> 없음</span></div>
+<div class="memo"><span><b>11장</b></span><span><b>담당</b> 결과 담당 (어디에)</span><span><b>레퍼런스</b> 버스 중앙차로 14쪽 (기존 기준 표와 본 연구 표, 차이만 강조), 17쪽 (좌우 대비)</span><span><b>채울 것</b> 없음</span></div>
 <aside class="notes">대본 자리. 담당자가 쓴다. 지금 대본은 구글 문서 「발표 종합 자료」 4부 4절에 있다.</aside>
 </section>
-<!-- ===== 11. 병목은 통로 여섯 곳에 뭉쳐 있다 ===== -->
-<section class="" data-no="11">
+<!-- ===== 12. 병목은 통로 여섯 곳에 뭉쳐 있다 ===== -->
+<section class="" data-no="12">
 <p class="lab">03. 분석 결과</p>
 <h2>병목은 통로 여섯 곳에 뭉쳐 있다</h2><div class="tabs"><span class="on">어디에</span><span>누구에게</span><span>왜</span></div>
 <div class="body"><div class="row">
@@ -346,11 +358,11 @@ body.shownotes #notes{display:block}
 <table style="margin-top:16px"><tr><th>문턱</th><th>150%</th><th>130%</th><th>100%</th><th>80%</th></tr><tr><td class="t">남는 구간</td><td class="n">0</td><td class="n">23</td><td class="n">90</td><td class="n">170</td></tr><tr><td class="t">컴포넌트 수 (가장 큰 것)</td><td class="n">0</td><td class="n">9 (4)</td><td class="n">12 (23)</td><td class="n">4 (163)</td></tr></table><p class="s" style="margin-top:10px">카드의 혼잡도와 열차 수는 통로에서 가장 붐비는 구간의 값. 작은 세 곳: 신도림, 내방, 송파</p></div>
 <div style="flex:1"><p class="sub">병목 통로 6개</p><div class="col" style="gap:10px"><div class="card" style="padding:12px 22px;border-radius:20px"><p class="key" style="font-size:26px">① 2호선 사당 → 교대</p><p class="s" style="margin:0">08:00 혼잡도 145% · 열차 9대 · 좁은 쪽 <b>도착</b></p></div><div class="card" style="padding:12px 22px;border-radius:20px"><p class="key" style="font-size:26px">② 4호선 성신여대입구 → 동대문</p><p class="s" style="margin:0">08:00 혼잡도 138% · 열차 10대 · 좁은 쪽 <b>출발</b></p></div><div class="card" style="padding:12px 22px;border-radius:20px"><p class="key" style="font-size:26px">③ 7호선 중곡 → 건대입구</p><p class="s" style="margin:0">08:00 혼잡도 144% · 열차 10대 · 좁은 쪽 <b>비슷</b></p></div><div class="card" style="padding:12px 22px;border-radius:20px"><p class="key" style="font-size:26px">④ 7호선 철산 → 가산디지털단지</p><p class="s" style="margin:0">08:00 혼잡도 146% · 열차 9대 · 좁은 쪽 <b>출발</b></p></div><div class="card" style="padding:12px 22px;border-radius:20px"><p class="key" style="font-size:26px">⑤ 8호선 천호 → 잠실</p><p class="s" style="margin:0">08:00 혼잡도 146% · 열차 7대 · 좁은 쪽 <b>출발</b></p></div><div class="card" style="padding:12px 22px;border-radius:20px"><p class="key" style="font-size:26px">⑥ 3호선 홍제 → 경복궁</p><p class="s" style="margin:0">08:00 혼잡도 136% · 열차 8대 · 좁은 쪽 <b>출발</b></p></div></div></div>
 </div></div>
-<div class="memo"><span><b>11장</b></span><span><b>담당</b> 결과 담당 (어디에)</span><span><b>레퍼런스</b> 구릉지 16쪽 (지도와 후보지 카드를 선으로 잇기), 화장실 10쪽 (지도 옆 순위 카드)</span><span><b>채울 것</b> 통로 지도</span></div>
+<div class="memo"><span><b>12장</b></span><span><b>담당</b> 결과 담당 (어디에)</span><span><b>레퍼런스</b> 구릉지 16쪽 (지도와 후보지 카드를 선으로 잇기), 화장실 10쪽 (지도 옆 순위 카드)</span><span><b>채울 것</b> 통로 지도</span></div>
 <aside class="notes">대본 자리. 담당자가 쓴다. 지금 대본은 구글 문서 「발표 종합 자료」 4부 4절에 있다.</aside>
 </section>
-<!-- ===== 12. 통로마다 좁은 쪽이 다르다: 병목의 손잡이 ===== -->
-<section class="" data-no="12">
+<!-- ===== 13. 통로마다 좁은 쪽이 다르다: 병목의 손잡이 ===== -->
+<section class="" data-no="13">
 <p class="lab">03. 분석 결과</p>
 <h2>통로마다 좁은 쪽이 다르다: 병목의 손잡이</h2><div class="tabs"><span>어디에</span><span class="on">누구에게</span><span>왜</span></div>
 <div class="body"><div class="row">
@@ -360,11 +372,11 @@ body.shownotes #notes{display:block}
 <ul><li>4호선 통로: 47%가 쌍문, 수유, 길음, 미아사거리, 상계에서 <b>탄다</b></li><li>2호선 통로: 47%가 선릉, 역삼, 강남, 삼성, 교대에서 <b>내린다</b></li></ul>
 <p class="s" style="margin-top:14px">판정 기준: 상위 5곳 비중이 반대쪽의 1.15배를 넘을 때. 근거는 담당자가 채운다</p></div>
 </div></div>
-<div class="memo"><span><b>12장</b></span><span><b>담당</b> 결과 담당 (누구에게)</span><span><b>레퍼런스</b> N버스 9쪽 (기준의 근거를 한 줄씩), 구릉지 15쪽 (유형별 특성)</span><span><b>채울 것</b> 1.15배와 상위 5곳의 근거</span></div>
+<div class="memo"><span><b>13장</b></span><span><b>담당</b> 결과 담당 (누구에게)</span><span><b>레퍼런스</b> N버스 9쪽 (기준의 근거를 한 줄씩), 구릉지 15쪽 (유형별 특성)</span><span><b>채울 것</b> 1.15배와 상위 5곳의 근거</span></div>
 <aside class="notes">대본 자리. 담당자가 쓴다. 지금 대본은 구글 문서 「발표 종합 자료」 4부 4절에 있다.</aside>
 </section>
-<!-- ===== 13. 집값이 낮은 구의 출근자가 더 붐비는 길을 지난다 ===== -->
-<section class="" data-no="13">
+<!-- ===== 14. 집값이 낮은 구의 출근자가 더 붐비는 길을 지난다 ===== -->
+<section class="" data-no="14">
 <p class="lab">03. 분석 결과</p>
 <h2>집값이 낮은 구의 출근자가 더 붐비는 길을 지난다</h2><div class="tabs"><span>어디에</span><span class="on">누구에게</span><span>왜</span></div>
 <div class="body"><div class="row">
@@ -374,11 +386,11 @@ body.shownotes #notes{display:block}
 <p style="margin-top:16px">하위 → 상위 구 통행은 전체의 <b>14%</b>인데 과밀의 <b>41%</b>를 겪는다</p>
 <p class="s">집값은 원인이 아니라 "아침에 나가는 구"를 가리키는 표지다. 혼잡은 사는 곳이 아니라 지나는 길에 있다</p></div>
 </div></div>
-<div class="memo"><span><b>13장</b></span><span><b>담당</b> 결과 담당 (누구에게)</span><span><b>레퍼런스</b> 화장실 16쪽 (상관 표와 핵심 발견점)</span><span><b>채울 것</b> 없음</span></div>
+<div class="memo"><span><b>14장</b></span><span><b>담당</b> 결과 담당 (누구에게)</span><span><b>레퍼런스</b> 화장실 16쪽 (상관 표와 핵심 발견점)</span><span><b>채울 것</b> 없음</span></div>
 <aside class="notes">대본 자리. 담당자가 쓴다. 지금 대본은 구글 문서 「발표 종합 자료」 4부 4절에 있다.</aside>
 </section>
-<!-- ===== 14. 승객이 줄기 전에 열차가 먼저 빠진다 ===== -->
-<section class="" data-no="14">
+<!-- ===== 15. 승객이 줄기 전에 열차가 먼저 빠진다 ===== -->
+<section class="" data-no="15">
 <p class="lab">03. 분석 결과</p>
 <h2>승객이 줄기 전에 열차가 먼저 빠진다</h2><div class="tabs"><span>어디에</span><span>누구에게</span><span class="on">왜</span></div>
 <div class="body"><div class="row">
@@ -391,11 +403,11 @@ body.shownotes #notes{display:block}
 <p class="sub">증회는 정점 한 칸만 내렸다 (대조군)</p><p>증회 노선 08:00 칸 <b>−8.0%p</b>, 나머지 노선 +1.7%p. 같은 노선의 09:00 칸은 <b>−0.4%p</b></p>
 <p class="s">가장 깨끗한 비교는 2024년 상반기: 4호선만 증회, 4호선만 −24.6%p (나머지 −0.5%p)</p></div>
 </div></div>
-<div class="memo"><span><b>14장</b></span><span><b>담당</b> 결과 담당 (왜)</span><span><b>레퍼런스</b> 버스 중앙차로 16쪽 (기존, 본 연구, 차이 세 열)</span><span><b>채울 것</b> 4호선 통로 그림(fig07)을 넣을지 결정</span></div>
+<div class="memo"><span><b>15장</b></span><span><b>담당</b> 결과 담당 (왜)</span><span><b>레퍼런스</b> 버스 중앙차로 16쪽 (기존, 본 연구, 차이 세 열)</span><span><b>채울 것</b> 4호선 통로 그림(fig07)을 넣을지 결정</span></div>
 <aside class="notes">대본 자리. 담당자가 쓴다. 지금 대본은 구글 문서 「발표 종합 자료」 4부 4절에 있다.</aside>
 </section>
-<!-- ===== 15. 최종 결과 ===== -->
-<section class="" data-no="15">
+<!-- ===== 16. 최종 결과 ===== -->
+<section class="" data-no="16">
 <p class="lab">04. 결론 · 최종 결과</p>
 <h2>남은 혼잡은 통로 여섯 곳, 아침에 나가는 구의 출근자, 09시 시간표에 있다</h2><div class="tabs"><span class="on">어디에</span><span class="on">누구에게</span><span class="on">왜</span></div>
 <div class="body">
@@ -412,7 +424,7 @@ body.shownotes #notes{display:block}
 <div style="flex:1"><p class="sub">세 답이 겹치는 곳</p><p class="s" style="margin:0 0 6px 0">위치, 사람, 시간을 함께 보면</p><p class="key">통로 여섯 곳의 09시</p></div>
 </div>
 </div>
-<div class="memo"><span><b>15장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 17쪽 (발견 세 개를 한 문장으로 묶기)</span><span><b>채울 것</b> 없음</span></div>
+<div class="memo"><span><b>16장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 17쪽 (발견 세 개를 한 문장으로 묶기)</span><span><b>채울 것</b> 없음</span></div>
 <aside class="notes">처음에 던진 질문으로 돌아가겠습니다. 150%를 달성한 뒤에 남은 혼잡은 어디에, 누구에게, 왜 남았는가.
 
 어디에. 130%를 넘는 구간 22개는 한 덩어리가 아니라 서로 떨어진 컴포넌트였고, 큰 것 여섯 개가 통로입니다. 관측 자료에서 바로 나온 결과입니다.
@@ -423,8 +435,8 @@ body.shownotes #notes{display:block}
 
 그래서 정책 질문의 답은 "충분하지 않다"입니다. 세 답은 한곳을 가리킵니다. 통로 여섯 곳의 09시입니다. (1:10)</aside>
 </section>
-<!-- ===== 16. 해결 방향 ===== -->
-<section class="" data-no="16">
+<!-- ===== 17. 해결 방향 ===== -->
+<section class="" data-no="17">
 <p class="lab">04. 결론 · 해결 방향</p>
 <h2>사람만 옮겨서는 풀리지 않고, 09시 열차를 유지해야 옮긴 효과가 난다</h2>
 <div class="body"><div class="row" style="gap:64px">
@@ -438,15 +450,15 @@ body.shownotes #notes{display:block}
 <ol class="obs"><li>사람만 옮기면 두 배를 옮겨도 −11%에서 멈춘다. 옮겨 갈 09:00 칸이 이미 차 있다.</li><li>09:00 열차를 유지한 행에서만, 더 옮길수록 더 풀린다.</li><li>기존 증회는 정점에만 닿았다. 증회 노선의 08:00 칸은 −8.0%p, 같은 노선의 09:00 칸은 −0.4%p.</li></ol>
 <p class="key" style="margin-top:10px">받는 칸을 먼저 열고, 그다음에 사람을 옮긴다.</p></div>
 </div></div>
-<div class="memo"><span><b>16장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 19쪽 (해법 방향 한 문장), 버스 중앙차로 14쪽 (표로 대비)</span><span><b>채울 것</b> 없음</span></div>
+<div class="memo"><span><b>17장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 19쪽 (해법 방향 한 문장), 버스 중앙차로 14쪽 (표로 대비)</span><span><b>채울 것</b> 없음</span></div>
 <aside class="notes">그러면 무엇을 바꾸면 풀리는지, 두 가지를 바꿔 가며 계산했습니다. 옮기는 사람의 비율과, 09시에 유지하는 열차의 범위입니다.
 
 첫 행을 보시면, 열차를 그대로 두고 사람만 옮기면 15%를 옮기든 30%를 옮기든 11%에서 멈춥니다. 옮겨 갈 09시 칸이 이미 차 있기 때문입니다. 열차를 유지한 행에서만 더 옮길수록 더 풀립니다.
 
 증회는 실패한 정책이 아닙니다. 150%를 지켰습니다. 다만 정점 한 칸에만 닿았습니다. 그래서 순서를 바꿉니다. 받는 칸을 먼저 열고, 그다음에 사람을 옮깁니다. (1:20)</aside>
 </section>
-<!-- ===== 17. 솔루션 1: 09:00 열차 감축을 늦춘다 ===== -->
-<section class="" data-no="17">
+<!-- ===== 18. 솔루션 1: 09:00 열차 감축을 늦춘다 ===== -->
+<section class="" data-no="18">
 <p class="lab">04. 결론 · 솔루션 1</p>
 <h2>솔루션 1: 병목 통로 여섯 곳에서 09시 열차 감축을 30분 늦춘다</h2>
 <div class="body"><div class="row" style="gap:64px">
@@ -458,11 +470,11 @@ body.shownotes #notes{display:block}
 <table style="font-size:26px"><tr><th style="text-align:left">구간</th><th class="num">08:00</th><th class="num">09:00</th></tr><tr><td>7호선 군자 → 어린이대공원</td><td class="num">10대</td><td class="num">7대</td></tr><tr><td>4호선 한성대입구 → 혜화</td><td class="num">10대</td><td class="num">7대</td></tr><tr><td>8호선 강동구청 → 몽촌토성</td><td class="num">7대</td><td class="num">5대</td></tr></table>
 <div class="ph" style="height:250px;margin-top:22px">그림 자리: 통로의 시간대별 열차 수 (지금의 감축 시각과 30분 늦춘 감축 시각)</div></div>
 </div></div>
-<div class="memo"><span><b>17장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 21쪽 (조건을 항목으로 나눠 적기), 22쪽 (기존 자원 활용)</span><span><b>채울 것</b> 열차 수 그림</span></div>
+<div class="memo"><span><b>18장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 21쪽 (조건을 항목으로 나눠 적기), 22쪽 (기존 자원 활용)</span><span><b>채울 것</b> 열차 수 그림</span></div>
 <aside class="notes">첫 번째 솔루션은 열차입니다. 병목 통로 여섯 곳에서 09시 열차 감축을 30분 늦춥니다. 30분당 평균 2대입니다. 새 전동차를 들이는 일이 아니라, 이미 달리던 열차의 감축 시각을 바꾸는 일입니다. (1:10)</aside>
 </section>
-<!-- ===== 18. 솔루션 2: 통로마다 좁은 쪽을 겨냥해 옮긴다 ===== -->
-<section class="" data-no="18">
+<!-- ===== 19. 솔루션 2: 통로마다 좁은 쪽을 겨냥해 옮긴다 ===== -->
+<section class="" data-no="19">
 <p class="lab">04. 결론 · 솔루션 2</p>
 <h2>솔루션 2: 통로마다 좁은 쪽 역의 이용자에게 시차 출근을 권한다</h2>
 <div class="body"><div class="row" style="gap:56px">
@@ -472,11 +484,11 @@ body.shownotes #notes{display:block}
 <p style="margin-top:22px">아침 통행의 2.48%를 옮기면 08:00 과밀이 <b>27.5%</b> 준다. 같은 인원을 모든 역에서 고르게 옮기면 13.2%다.</p>
 <p class="note">지금 열차로는 순효과가 −11%에 그친다. 솔루션 1과 함께 써야 한다.</p></div>
 </div></div>
-<div class="memo"><span><b>18장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 22쪽 (대상 지역을 짚어 적용), 구릉지 16쪽 (후보지별 추천)</span><span><b>채울 것</b> 없음</span></div>
+<div class="memo"><span><b>19장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 22쪽 (대상 지역을 짚어 적용), 구릉지 16쪽 (후보지별 추천)</span><span><b>채울 것</b> 없음</span></div>
 <aside class="notes">두 번째 솔루션은 사람입니다. 누구에게나 권하는 시차 출근이 아니라, 통로마다 어느 역 이용자에게 권할지를 정합니다. 2호선 통로는 도착역인 강남 쪽, 4호선 통로는 출발역인 쌍문, 수유 쪽입니다. 같은 인원을 고르게 옮길 때보다 두 배 효과가 납니다. (1:00)</aside>
 </section>
-<!-- ===== 19. 기대효과 및 한계점 ===== -->
-<section class="" data-no="19">
+<!-- ===== 20. 기대효과 및 한계점 ===== -->
+<section class="" data-no="20">
 <p class="lab">04. 결론 · 기대효과 및 한계점</p>
 <h2>두 솔루션을 함께 쓰면 과밀이 25% 줄고, 새 전동차 없이 할 수 있다</h2>
 <div class="body"><div class="row" style="gap:64px">
@@ -491,15 +503,15 @@ body.shownotes #notes{display:block}
 </div>
 <div class="band" style="margin-top:26px"><p class="key">150%라는 최댓값 하나로는 보이지 않던 혼잡이다. 통로 여섯 곳의 09시부터 고친다.</p></div>
 </div>
-<div class="memo"><span><b>19장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 구릉지 18쪽 (기대효과와 한계점을 한 장에), 화장실 23쪽 (일반화)</span><span><b>채울 것</b> 일반화 한 줄 (선택)</span></div>
+<div class="memo"><span><b>20장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 구릉지 18쪽 (기대효과와 한계점을 한 장에), 화장실 23쪽 (일반화)</span><span><b>채울 것</b> 일반화 한 줄 (선택)</span></div>
 <aside class="notes">두 솔루션을 함께 쓰면 과밀이 25% 줄어듭니다. 사람만 옮길 때의 11%와 비교되는 값입니다. 새 전동차는 필요하지 않습니다.
 
 한계도 있습니다. 아침 통행은 추정값이고, 15% 이동은 가정이며, 비용은 계산하지 않았습니다.
 
 150%라는 최댓값 하나로는 보이지 않던 혼잡입니다. 통로 여섯 곳의 09시부터 고치면, 가장 붐비는 길을 지나던 사람들부터 풀립니다. 감사합니다. (1:10)</aside>
 </section>
-<!-- ===== 20. 참고자료 ===== -->
-<section class="" data-no="20">
+<!-- ===== 21. 참고자료 ===== -->
+<section class="" data-no="21">
 <p class="lab">04. 결론</p>
 <h2>참고자료</h2>
 <div class="body"><div class="row">
@@ -514,7 +526,7 @@ body.shownotes #notes{display:block}
 <li>송예나·이금숙·장한울 (2019). 서울시 지하철 네트워크의 접근성과 공간적 형평성.</li></ol>
 <p class="sub" style="margin-top:22px">관련 자료</p><p class="s">서울시 증회·증차 보도자료, 2026-09 혼잡도 단계 보도 (출처 주소는 담당자가 채운다)</p></div>
 </div></div>
-<div class="memo"><span><b>20장</b></span><span><b>담당</b> 공통</span><span><b>레퍼런스</b> 구릉지 19쪽 (데이터 목록, 관련 논문, 기사, 분석 툴)</span><span><b>채울 것</b> 논문 서지 정보 원문 확인, 보도자료 주소</span></div>
+<div class="memo"><span><b>21장</b></span><span><b>담당</b> 공통</span><span><b>레퍼런스</b> 구릉지 19쪽 (데이터 목록, 관련 논문, 기사, 분석 툴)</span><span><b>채울 것</b> 논문 서지 정보 원문 확인, 보도자료 주소</span></div>
 <aside class="notes"></aside>
 </section>
 </div>
