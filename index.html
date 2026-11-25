@@ -162,20 +162,52 @@ body.shownotes #notes{display:block}
 </section>
 <!-- ===== 6. 연구 목적과 핵심 질문 ===== -->
 <section class="" data-no="6">
+<style>
+.x6{position:relative;height:760px}
+.x6 table{position:absolute;left:0;top:0;width:900px;font-size:24px}
+.x6 th{height:52px;text-align:left}
+.x6 td{word-break:keep-all;height:170px;vertical-align:middle;line-height:1.45}
+.x6 td.ax{width:150px;font-size:28px;font-weight:700;color:#16324f}
+.x6 td.ax small{display:block;font-size:19px;font-weight:400;color:#2166c4;margin-top:2px}
+.x6 td.old b{color:#16324f}
+.x6 svg{position:absolute;left:0;top:0}
+.x6 .cond{position:absolute;left:1020px;top:143px;width:300px;height:330px;border-top:3px solid #2166c4;border-bottom:3px solid #2166c4;background:#eef4fc;display:flex;flex-direction:column;justify-content:center;padding:0 20px}
+.x6 .cond .t{font-size:20px;color:#2166c4;font-weight:700;margin:0 0 10px 0}
+.x6 .cond p{white-space:nowrap;font-size:26px;font-weight:700;color:#16324f;margin:0 0 8px 0;line-height:1.35}
+.x6 .sol{position:absolute;left:1400px;width:328px;height:226px;border-top:3px solid #16324f;padding:14px 4px 0 4px}
+.x6 .sol .n{white-space:nowrap;font-size:19px;color:#2166c4;font-weight:700;margin:0 0 4px 0}
+.x6 .sol .h{font-size:27px;font-weight:700;color:#16324f;margin:0 0 8px 0;line-height:1.3}
+.x6 .sol .d{font-size:21px;color:#4d5b6a;margin:0;line-height:1.45}
+.x6 .ev{position:absolute;left:0;top:620px;width:1728px;background:#eef4fc;padding:16px 24px;display:flex;align-items:baseline;gap:40px}
+.x6 .ev span{font-size:25px;color:#16324f}.x6 .ev b{font-size:30px}.x6 .ev .hot{color:#d9541e}
+.x6 .evn{position:absolute;left:0;top:700px;font-size:20px;color:#66727f;margin:0}
+.x6 td.q{font-weight:700;color:#16324f}
+.x6 .cond p.d{white-space:normal;word-break:keep-all;font-size:20px;font-weight:400;color:#4d5b6a;margin-top:10px;line-height:1.45}
+
+.x6 td,.x6 p,.x6 span{word-break:keep-all;overflow-wrap:normal;text-wrap:balance}
+.x6 td small.sm{display:block;font-size:19px;color:#66727f;margin-top:4px}
+</style>
 <p class="lab">01. 연구 개요</p>
 <h2>연구 목적과 핵심 질문</h2>
-<div class="body"><div class="row" style="align-items:center;margin-bottom:28px"><span class="pill" style="margin:0">연구 목적</span><p class="key">150%를 달성한 뒤에 남은 혼잡이 어디에, 누구에게, 언제 남았는지를 통근 네트워크로 측정</p></div>
-<div class="band"><span class="pill">핵심 질문</span>
-<div class="row" style="align-items:center">
-<div style="flex:1"><p class="key">1. 어디에</p><p>병목은 망의 어디에, 어떤 모양으로 있나</p><p class="s">← 노선별 최고 혼잡도 기준은 130~150%를 “보통”으로 봄</p></div>
-<div style="flex:1"><p class="key">2. 누구에게</p><p>누가 그 병목을 지나고, 누가 더 겪나</p><p class="s">← 역별 통계로는 겪는 사람이 안 보임</p></div>
-<div style="flex:1"><p class="key">3. 언제</p><p>병목은 언제 생기고, 증회 뒤에도 언제까지 남나</p><p class="s">← 증회는 08:00 칸 하나만 겨냥함</p></div>
-<p class="arrow">➜</p>
-<div class="goal"><span class="s" style="color:#dfe8f0">Goal</span>남은 혼잡의<br><span style="font-size:24px">어디에·누구에게·언제</span><br>그리고 해결 순서</div>
+<div class="body"><div class="x6">
+<table>
+<tr><th>축</th><th style="width:320px">핵심 질문</th><th>지금 기준으로는 보이지 않는 것</th></tr>
+<tr><td class="ax">어디에<small>중시</small></td><td class="q">병목은 망의 어디에,<br>어떤 모양으로 있나</td><td class="old"><b>노선별 최댓값</b>은 130~150%를<br>"보통"으로 본다</td></tr>
+<tr><td class="ax">누구에게<small>거시</small></td><td class="q">누가 그 병목을 지나고,<br>누가 더 겪나</td><td class="old"><b>역별 통계</b>로는<br>지나가는 사람이 보이지 않는다</td></tr>
+<tr><td class="ax">언제<small>시간</small></td><td class="q">정점이 지난 뒤에도<br>혼잡은 언제까지 남나</td><td class="old"><b>증회</b>는 08:00 정점 한 칸만 겨냥한다</td></tr>
+</table>
+<svg width="1728" height="620" viewBox="0 0 1728 620" fill="none" stroke="#16324f" stroke-width="1.5" stroke-linecap="square">
+<defs><marker id="a6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,1 L10,5 L0,9 z" fill="#16324f" stroke="none"/></marker></defs>
+<path d="M912,138 H956 M912,478 H956 M956,138 V478"/><path d="M912,308 H1010" marker-end="url(#a6)"/>
+<path d="M1330,308 H1362 M1362,176 V436"/><path d="M1362,176 H1390" marker-end="url(#a6)"/><path d="M1362,436 H1390" marker-end="url(#a6)"/>
+</svg>
+<div class="cond"><p class="t">연구 목적</p><p>남은 혼잡의</p><p>위치 · 대상 · 시점을</p><p>통근 네트워크로 측정</p><p class="d">150%를 달성한 뒤에<br>남은 혼잡이 대상이다</p></div>
+<div class="sol" style="top:62px"><p class="n">Goal 1 · 결과</p><p class="h">세 질문의 답을<br>한 장으로 모은다</p><p class="d">어디에 · 누구에게 · 언제</p></div>
+<div class="sol" style="top:322px"><p class="n">Goal 2 · 해법</p><p class="h">세 축을 함께 푸는<br>해결 순서를 낸다</p><p class="d">열차와 사람, 무엇을 먼저 할지</p></div>
+<div class="ev"><span>정책 질문</span><span><b>노선별 최고 혼잡도 하나로 관리하면 충분한가</b></span></div>
 </div></div>
-<p class="key c" style="margin-top:34px;font-size:30px">정책 질문: 노선별 최고 혼잡도 하나로 관리하면 충분한가</p></div>
 <div class="memo"><span><b>6장</b></span><span><b>담당</b> 김민주</span><span><b>레퍼런스</b> 구릉지 5쪽 (목적 한 줄, 세 가지, Goal 원), 화장실 6쪽 (질문 전환)</span><span><b>채울 것</b> 없음</span></div>
-<aside class="notes">그래서 저희의 핵심 질문은 이것입니다. 150%를 달성한 뒤 남은 혼잡은 어디에, 누구에게, 언제 남았는가. 어디에는 병목이 망의 어디에 어떤 모양으로 있는지, 누구에게는 누가 그 병목을 지나고 누가 더 겪는지, 언제는 병목이 언제 생기고 증회 뒤에도 언제까지 남는지입니다. 그 밑에는 노선별 최고 혼잡도 하나로 관리하면 충분한가라는 정책 질문이 있습니다. 세 질문의 답은 발표 후반부에서 차례로 드리겠습니다. 이 질문을 어떤 순서로 풀었는지 순서도로 보겠습니다. (0:35)</aside>
+<aside class="notes">그래서 저희의 핵심 질문은 이것입니다. 150%를 달성한 뒤 남은 혼잡은 어디에, 누구에게, 언제 남는가. 어디에는 병목이 망의 어디에 어떤 모양으로 있는지, 누구에게는 누가 그 병목을 지나고 누가 더 겪는지, 언제는 정점이 지난 뒤에도 혼잡이 언제까지 남는지입니다. 세 질문은 하나의 목적으로 모입니다. 남은 혼잡의 위치, 대상, 시점을 통근 네트워크로 측정하는 것입니다. 그 밑에는 최고 혼잡도 하나로 관리하면 충분한가라는 정책 질문이 있습니다. 답은 후반부에서 같은 틀로 드리겠습니다. (0:40)</aside>
 </section>
 <!-- ===== 7. 순서도 ===== -->
 <style>
