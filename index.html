@@ -431,7 +431,7 @@ body.shownotes #notes{display:block}
 <div style="width:900px"><p class="cap"><b>표 2.</b> 이동 비율과 09:00 열차 유지 범위에 따른 과밀 변화</p>
 <table style="font-size:28px"><tr><th style="text-align:left">09:00 열차 유지 범위</th><th class="num">이동 없음</th><th class="num">15% 이동</th><th class="num">30% 이동</th></tr>
 <tr><td class="t">유지 없음 (지금)</td><td class="num">0%</td><td class="num"><span class="hl">−11%</span></td><td class="num"><span class="hl">−11%</span></td></tr>
-<tr><td class="t">병목 통로 6곳만</td><td class="num">−8%</td><td class="num">−25%</td><td class="num">−31%</td></tr>
+<tr class="em"><td class="t">병목 통로 6곳만</td><td class="num">−8%</td><td class="num">−25%</td><td class="num">−31%</td></tr>
 <tr><td class="t">전 구간</td><td class="num">−13%</td><td class="num">−32%</td><td class="num">−45%</td></tr></table>
 <p class="note">값은 08:00 칸과 09:00 칸의 과밀 분 합계 변화. 이동은 통로마다 좁은 쪽 역 이용자가 08:00에서 09:00으로 옮기는 비율이고, 15%와 30%는 가정이다 (해외 실적 1.5~8%). 유지는 09:00 칸 열차 수를 08:00 수준으로 두는 것.</p></div>
 <div style="flex:1"><p class="sub">표에서 읽히는 것</p>
@@ -482,7 +482,7 @@ body.shownotes #notes{display:block}
 <div class="body"><div class="row" style="gap:64px">
 <div style="flex:1"><p class="sub">기대효과</p>
 <table style="font-size:26px"><tr><th style="text-align:left">항목</th><th style="text-align:left">값</th><th style="text-align:left">조건</th></tr>
-<tr><td class="t">과밀 감소</td><td><span class="hl">−25%</span></td><td>통로 6곳만 열차 유지, 좁은 쪽 15% 이동 (전 구간 유지면 −32%)</td></tr>
+<tr class="em"><td class="t">과밀 감소</td><td><span class="hl">−25%</span></td><td>통로 6곳만 열차 유지, 좁은 쪽 15% 이동 (전 구간 유지면 −32%)</td></tr>
 <tr><td class="t">사람만 옮길 때</td><td>−11%</td><td>열차 유지 없음. 비교 기준</td></tr>
 <tr><td class="t">피할 수 있는 비율</td><td>0.41 → 0.80</td><td>집값 하위 8개 구. 60분 안에 출발을 늦춰 정원 초과를 피하는 통행의 비율 (상위 8개 구 0.72 → 0.95)</td></tr>
 <tr><td class="t">추가 차량</td><td>없음</td><td>운행 중인 열차의 감축 시각만 바꾼다. 2027년 증차 전에 가능</td></tr></table></div>
@@ -519,67 +519,60 @@ body.shownotes #notes{display:block}
 </section>
 </div>
 <style id="academic">
-/* ===== 학술 발표 스타일 (STYLE_PROMPT.md 참고). 이 블록을 지우면 이전 모양으로 돌아간다 ===== */
-section{color:#1a1a1a;background:#fff linear-gradient(#1a1a1a,#1a1a1a) no-repeat 96px 178px / 1728px 2px;font-feature-settings:"tnum" 1;letter-spacing:-0.005em}
-section::before{content:"150%를 달성한 뒤에 남은 혼잡 · 소셜 네트워크 과학";position:absolute;left:96px;top:auto;bottom:22px;width:auto;height:auto;background:none;font-size:18px;color:#8a8a8a}
-section::after{content:attr(data-no);position:absolute;right:96px;bottom:22px;font-size:18px;color:#8a8a8a}
-.lab{top:34px;font-size:20px;color:#6b6b6b;letter-spacing:.04em}
-h2{top:66px;font-size:46px;line-height:1.22;font-weight:700;color:#111;width:1440px;letter-spacing:-0.02em}
+/* ===== 학술 발표 스타일 (STYLE_PROMPT.md 참고). 이 블록을 지우면 이전 모양으로 돌아간다 =====
+   색: 남색 #16324f(글·선), 파랑 #2166c4(주색, 그림의 파랑과 같은 계열), 주황 #d9541e(강조 한 군데, 그림의 주황과 같은 계열), 옅은 파랑 #eaf1fb(표 머리글·띠) */
+/* 1) 모든 장 공통: 머리글, 제목, 바닥글 */
+section{background:#fff linear-gradient(#2166c4,#2166c4) no-repeat 96px 176px / 1728px 3px}
+section:not(:has(.fc)):not([data-no="8"]){color:#1c2733;font-feature-settings:"tnum" 1;letter-spacing:-0.005em}
+section::before{content:"150%를 달성한 뒤에 남은 혼잡 · 소셜 네트워크 과학";position:absolute;left:96px;top:auto;bottom:22px;width:auto;height:auto;background:none;font-size:18px;color:#8794a1}
+section::after{content:attr(data-no);position:absolute;right:96px;bottom:20px;font-size:20px;font-weight:700;color:#2166c4}
+.lab{top:34px;font-size:20px;color:#2166c4;font-weight:700;letter-spacing:.04em}
+h2{top:66px;font-size:46px;line-height:1.22;font-weight:700;color:#16324f;width:1440px;letter-spacing:-0.02em}
 .tabs{top:40px;right:96px;gap:0}
-.tabs span{font-size:20px;padding:0 0 2px 0;margin-left:22px;border:0;border-radius:0;color:#a3a3a3;background:none}
-.tabs span.on{background:none;color:#111;font-weight:700;border-bottom:2px solid #111}
-.sub{font-size:26px;font-weight:700;color:#111;border-left:0;padding-left:0;margin:0 0 12px 0}
-.pill{background:none;color:#1f3a5f;font-size:24px;font-weight:700;padding:0 0 4px 0;border-radius:0;border-bottom:2px solid #1f3a5f;margin:0 0 16px 0}
-.card,.card.w{background:none;border:0;border-top:2px solid #1a1a1a;border-radius:0;padding:18px 4px 0 4px}
-.band{background:none;border-radius:0;border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a;padding:18px 4px}
-.s{color:#555}
-.big{font-size:72px;font-weight:700;color:#111;letter-spacing:-0.02em}.big.r{color:#a61b1b}
-.hl{background:none;padding:0;font-weight:700;color:#a61b1b}
-.key{font-size:30px;color:#111}
-table{border-top:2.5px solid #1a1a1a;border-bottom:2.5px solid #1a1a1a}
-th{background:none;color:#111;font-weight:700;border:0;border-bottom:1.5px solid #1a1a1a;padding:9px 14px}
-td{background:none;border:0;border-bottom:1px solid #e3e3e3;padding:9px 14px}
-tr:last-child td{border-bottom:0}
-td.t{background:none;color:#111;font-weight:700}
-img.fig{border:0;border-radius:0;background:#fff}
-.ph{border:1.5px dashed #9a9a9a;border-radius:0;background:none;color:#777;font-size:22px}
-.arrow{font-size:40px;color:#1a1a1a}
-.goal{width:300px;height:auto;min-height:200px;border-radius:0;background:none;color:#111;border:2px solid #1a1a1a;font-size:28px}
-.goal *{color:inherit!important}
-.cover{background:#fff;color:#111}.cover::before,.cover::after{display:none}
-.cover{background-image:linear-gradient(#1a1a1a,#1a1a1a);background-repeat:no-repeat;background-position:120px 300px;background-size:1680px 3px}
-.cover .k{top:232px;font-size:28px;color:#555;letter-spacing:.04em}
-.cover h1{top:340px;font-size:78px;font-weight:700;line-height:1.3;letter-spacing:-0.02em;color:#111}
-.cover .q{top:640px;font-size:36px;color:#333}
-.cover .team{right:auto;left:120px;bottom:96px;text-align:left;font-size:28px;color:#333}
-.dark{background:#fff linear-gradient(#1a1a1a,#1a1a1a) no-repeat 96px 178px / 1728px 2px;color:#1a1a1a}
-.dark::before,.dark::after{display:block}.dark .lab{color:#6b6b6b}.dark h2{color:#111}
-.dark .say{left:96px;top:250px;width:1728px;font-size:58px;line-height:1.4;color:#111}.dark .say b{color:#a61b1b}
+.tabs span{font-size:20px;padding:0 0 2px 0;margin-left:22px;border:0;border-radius:0;color:#a7b1bc;background:none}
+.tabs span.on{background:none;color:#2166c4;font-weight:700;border-bottom:3px solid #2166c4}
+.memo{left:0;background:#f4f6f8;border-top:1px solid #c3ccd6;color:#55616e;z-index:3;height:56px;font-size:20px}.memo b{color:#16324f}
+/* 2) 표지, 목차, 구호 장 */
+.cover{background:#fff linear-gradient(#16324f,#16324f) no-repeat 0 100% / 100% 190px;color:#16324f}.cover::before,.cover::after{display:none}
+.cover .k{top:210px;font-size:28px;color:#2166c4;font-weight:700;letter-spacing:.04em}
+.cover h1{top:280px;font-size:78px;font-weight:700;line-height:1.3;letter-spacing:-0.02em;color:#16324f}
+.cover .q{top:580px;font-size:36px;color:#3b4a5a;border-left:0}
+.cover .team{right:auto;left:120px;bottom:52px;text-align:left;font-size:28px;color:#fff}
+.dark{background:#fff linear-gradient(#2166c4,#2166c4) no-repeat 96px 176px / 1728px 3px;color:#1c2733}
+.dark::before,.dark::after{display:block}.dark .lab{color:#2166c4}.dark h2{color:#16324f}
+.dark .say{left:96px;top:250px;width:1728px;font-size:58px;line-height:1.4;color:#16324f}.dark .say b{color:#d9541e}
 .dark .facts{left:96px;top:600px;width:1728px;gap:40px}
-.dark .facts div{border-top:2px solid #1a1a1a;color:#333;font-size:26px}.dark .facts b{color:#111}
-.toc .no{color:#111;border-bottom:2px solid #1a1a1a;font-weight:700}.toc h3{color:#111;font-size:36px}.toc p{color:#444;font-size:26px}.toc div{text-align:left}
-.memo{left:0;background:#f4f4f4;border-top:1px solid #bdbdbd;color:#555;z-index:3;height:56px;font-size:20px}.memo b{color:#222}
-.body [style*="border-radius"]:not([style*="50%"]){border-radius:0!important}
-/* 표·그림 번호와 주석 */
-.cap{font-size:22px;color:#333;margin:0 0 8px 0}.cap b{color:#111}
-.note{font-size:20px;color:#666;margin:8px 0 0 0;line-height:1.45}
+.dark .facts div{border-top:3px solid #2166c4;color:#3b4a5a;font-size:26px}.dark .facts b{color:#16324f}
+.toc .no{color:#2166c4;border-bottom:3px solid #2166c4;font-weight:700}.toc h3{color:#16324f;font-size:36px}.toc p{color:#4d5b6a;font-size:26px}.toc div{text-align:left}
+/* 3) 본문 요소. 구조도 장(순서도, 데이터 가공)은 제외한다 */
+:where(section:not(:has(.fc)):not([data-no="8"])) .sub{font-size:26px;font-weight:700;color:#16324f;border-left:0;padding-left:0;margin:0 0 12px 0}
+:where(section:not(:has(.fc)):not([data-no="8"])) .pill{background:none;color:#2166c4;font-size:24px;font-weight:700;padding:0 0 4px 0;border-radius:0;border-bottom:3px solid #2166c4;margin:0 0 16px 0}
+:where(section:not(:has(.fc)):not([data-no="8"])) .card{background:none;border:0;border-top:3px solid #2166c4;border-radius:0;padding:18px 4px 0 4px}
+:where(section:not(:has(.fc)):not([data-no="8"])) .card.w{background:none;border:0;border-top:3px solid #2166c4;border-radius:0;padding:18px 4px 0 4px}
+:where(section:not(:has(.fc)):not([data-no="8"])) .band{background:#eef4fc;border-radius:0;border:0;border-left:0;padding:18px 24px}
+:where(section:not(:has(.fc)):not([data-no="8"])) .s{color:#4d5b6a}
+:where(section:not(:has(.fc)):not([data-no="8"])) .big{font-size:72px;font-weight:700;color:#16324f;letter-spacing:-0.02em}
+:where(section:not(:has(.fc)):not([data-no="8"])) .big.r{color:#d9541e}
+:where(section:not(:has(.fc)):not([data-no="8"])) .hl{background:none;padding:0;font-weight:700;color:#d9541e}
+:where(section:not(:has(.fc)):not([data-no="8"])) .key{font-size:30px;color:#16324f}
+:where(section:not(:has(.fc)):not([data-no="8"])) table{border-top:2.5px solid #16324f;border-bottom:2.5px solid #16324f}
+:where(section:not(:has(.fc)):not([data-no="8"])) th{background:#eaf1fb;color:#16324f;font-weight:700;border:0;border-bottom:1.5px solid #16324f;padding:9px 14px}
+:where(section:not(:has(.fc)):not([data-no="8"])) td{background:none;border:0;border-bottom:1px solid #dfe5ec;padding:9px 14px}
+:where(section:not(:has(.fc)):not([data-no="8"])) tr:last-child td{border-bottom:0}
+:where(section:not(:has(.fc)):not([data-no="8"])) td.t{background:none;color:#16324f;font-weight:700}
+:where(section:not(:has(.fc)):not([data-no="8"])) img.fig{border:0;border-radius:0;background:#fff}
+:where(section:not(:has(.fc)):not([data-no="8"])) .ph{border:1.5px dashed #8fa3b8;border-radius:0;background:#f7f9fc;color:#5d6c7b;font-size:22px}
+:where(section:not(:has(.fc)):not([data-no="8"])) .arrow{font-size:40px;color:#2166c4}
+:where(section:not(:has(.fc)):not([data-no="8"])) .goal{width:300px;height:auto;min-height:200px;border-radius:0;background:#eef4fc;color:#16324f;border:0;border-top:3px solid #2166c4;font-size:28px}
+:where(section:not(:has(.fc)):not([data-no="8"])) .goal *{color:inherit!important}
+:where(section:not(:has(.fc)):not([data-no="8"])) .card[style*="border-radius"]{border-radius:0!important}
+/* 4) 표·그림 번호와 주석 */
+.cap{font-size:22px;color:#3b4a5a;margin:0 0 8px 0}.cap b{color:#2166c4}
+.note{font-size:20px;color:#66727f;margin:8px 0 0 0;line-height:1.45}
 td.num,th.num{text-align:right;white-space:nowrap}
-.fin td{padding:14px 14px;vertical-align:middle}.fin .a{font-size:28px;font-weight:700;color:#111}.fin .v{font-size:30px;font-weight:700;color:#111;white-space:nowrap}
-.obs{counter-reset:o;list-style:none;padding:0;margin:0}.obs li{counter-increment:o;padding:0 0 14px 46px;position:relative;margin:0}.obs li::before{content:"(" counter(o) ")";position:absolute;left:0;top:0;color:#555}
-/* 순서도(.fc)와 데이터 가공 장: 색 면을 줄이고 선으로 구분 */
-.fc .bx,.fc-q,.fc-eq,.fc-q2,.fc-lab,.fc-how,.fc-m,.fc-tag{border-radius:0!important}
-.fc .bx{border:1.5px solid #1a1a1a}
-.fc-tag{background:none;color:#111;border-bottom:1.5px solid #1a1a1a}
-.fc-circle{background:none;color:#111;border:2px solid #1a1a1a}
-.fc-note,.fc-note b{color:#333}
-.fc-q,.fc-q2{background:#f2f2f2}.fc-q b{color:#a61b1b}
-.fc-eq{background:#1a1a1a}.fc-eq .f,.fc-eq .c{color:#fff}
-.fc-lab,.fc-cap .fc-lab{background:#f2f2f2;color:#111;border:0}
-.fc-how,.fc-cap .fc-how{border:1px solid #9a9a9a}
-.fc-m,.fc-cap .fc-m{border:1.5px solid #1a1a1a;background:#fff}.fc-m b,.fc-cap .fc-m b{color:#111}
-.fc-ar,.fc-dn{color:#1a1a1a}.fc-lh div{color:#111;border-bottom:1.5px solid #1a1a1a}
-.body span[style*="background:#c9d7e4"]{background:none!important;color:#111!important;padding:0!important}
-.body .card[style*="border-top:10px"]{border-top:2px solid #1a1a1a!important}
+.fin td{padding:14px 14px;vertical-align:middle}.fin .a{font-size:28px;font-weight:700;color:#16324f}.fin .v{font-size:30px;font-weight:700;color:#16324f;white-space:nowrap}
+tr.em td{background:#fdf1ea}
+.obs{counter-reset:o;list-style:none;padding:0;margin:0}.obs li{counter-increment:o;padding:0 0 14px 46px;position:relative;margin:0}.obs li::before{content:"(" counter(o) ")";position:absolute;left:0;top:0;color:#2166c4;font-weight:700}
 </style>
 <div id="notes"></div>
 <div id="bar"><button id="prev">← 이전</button><button id="next">다음 →</button><span id="pos"></span><span class="sp"></span><span>← → 이동 · N 대본 · M 작업 메모 · F 전체 화면 · 숫자 + Enter 로 이동</span><button id="nb">대본 (N)</button><button id="fs">전체 화면 (F)</button></div>
