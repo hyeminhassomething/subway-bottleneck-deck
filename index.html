@@ -396,77 +396,107 @@ body.shownotes #notes{display:block}
 </section>
 <!-- ===== 15. 최종 결과 ===== -->
 <section class="" data-no="15">
-<p class="lab">04. 결론</p>
-<h2>최종 결과</h2>
-<div class="body"><p class="s" style="margin-bottom:14px">처음의 질문: 150%를 달성한 뒤에 남은 혼잡은 어디에, 누구에게, 왜 남았는가</p>
-<table style="font-size:27px"><tr><th style="width:190px">질문</th><th style="width:520px">답</th><th>근거 숫자</th></tr>
-<tr><td class="t">어디에</td><td><b>망 전체가 아니라 통로 6개</b></td><td>130% 이상 구간 22개, 아침 통행의 28.0%가 지난다. 위치는 구조(0.41)가 아니라 통행(0.86)이 정한다</td></tr>
-<tr><td class="t">누구에게</td><td><b>집값이 낮고 아침에 나가는 구의 출근자</b></td><td>평균 혼잡도 하위 8개 구 91%, 상위 8개 구 67%. 하위 → 상위 통행은 전체의 14%인데 과밀의 41%를 겪는다</td></tr>
-<tr><td class="t">왜</td><td><b>승객이 줄기 전에 열차가 먼저 빠져서</b></td><td>09:00에 승객 62, 열차 9.0 → 7.2대, 혼잡도 108%. 정원을 넘는 23개 구간은 열차를 유지하면 119 → 84%</td></tr></table>
-<p class="s" style="margin:18px 0">통로: 2호선 사당→교대 · 4호선 성신여대입구→동대문 · 7호선 중곡→건대입구 · 7호선 철산→가산디지털단지 · 8호선 천호→잠실 · 3호선 홍제→경복궁</p>
-<div class="band c"><p class="key" style="font-size:40px">세 답이 한곳을 가리킨다: 통로 여섯 곳의 09시</p></div></div>
+<p class="lab">04. 결론 · 최종 결과</p>
+<h2>남은 혼잡은 통로 여섯 곳, 아침에 나가는 구의 출근자, 09시 시간표에 있다</h2><div class="tabs"><span class="on">어디에</span><span class="on">누구에게</span><span class="on">왜</span></div>
+<div class="body">
+<p class="cap"><b>표 1.</b> 세 질문의 답 (평일 08:00 칸 기준, 2026-09)</p>
+<table class="fin" style="font-size:25px">
+<tr><th style="width:150px;text-align:left">질문</th><th style="text-align:left">답</th><th style="width:300px;text-align:left">분석 수준</th><th style="width:300px;text-align:left">근거의 종류</th><th style="width:420px;text-align:left">핵심 수치</th></tr>
+<tr><td class="t">어디에</td><td><span class="a">서로 떨어진 통로 여섯 곳</span><br><span class="s">위치는 선로 구조가 아니라 통행이 정한다</span></td><td>중시 (컴포넌트)</td><td>관측</td><td><span class="v">22개 구간</span><br><span class="s">컴포넌트 9개 중 큰 6개</span></td></tr>
+<tr><td class="t">누구에게</td><td><span class="a">아침에 나가는 구의 출근자</span><br><span class="s">역이 아니라 지나는 경로로 잰 혼잡</span></td><td>거시 (집단 사이의 흐름)</td><td>모형<br><span class="s">실측과 순위상관 0.86</span></td><td><span class="v">91% 대 67%</span><br><span class="s">평균 혼잡도, 집값 하위 8개 구 대 상위 8개 구</span></td></tr>
+<tr><td class="t">왜</td><td><span class="a">승객보다 열차가 먼저 빠져서</span><br><span class="s">혼잡도를 승객과 열차 수로 나눠 본 결과</span></td><td>시간 (가중치의 변화)</td><td>관측</td><td><span class="v">승객 62, 혼잡도 108%</span><br><span class="s">09:00 칸. 08:00 승객 = 100</span></td></tr>
+</table>
+<p class="note">관측: 실측 혼잡도와 시간표에서 직접 계산. 모형: 아침 통행을 가장 빠른 경로에 실은 값. 통로: 2호선 사당→교대, 4호선 성신여대입구→동대문, 7호선 중곡→건대입구, 7호선 철산→가산디지털단지, 8호선 천호→잠실, 3호선 홍제→경복궁.</p>
+<div class="row" style="margin-top:26px;gap:56px">
+<div style="flex:1.25"><p class="sub">정책 질문에 대한 답</p><p class="s" style="margin:0 0 6px 0">노선별 최고 혼잡도 하나로 관리하면 충분한가</p><p class="key">충분하지 않다. 최고 혼잡도는 구간 하나의 한 시점만 보는 미시 지표다.</p></div>
+<div style="flex:1"><p class="sub">세 답이 겹치는 곳</p><p class="s" style="margin:0 0 6px 0">위치, 사람, 시간을 함께 보면</p><p class="key">통로 여섯 곳의 09시</p></div>
+</div>
+</div>
 <div class="memo"><span><b>15장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 17쪽 (발견 세 개를 한 문장으로 묶기)</span><span><b>채울 것</b> 없음</span></div>
 <aside class="notes">처음에 던진 질문으로 돌아가겠습니다. 150%를 달성한 뒤에 남은 혼잡은 어디에, 누구에게, 왜 남았는가.
 
-어디에. 130%를 넘는 구간 22개는 흩어져 있지 않고 통로 여섯 곳에 뭉쳐 있었습니다. 그 위치는 선로 모양이 아니라 통행이 정했습니다.
+어디에. 130%를 넘는 구간 22개는 한 덩어리가 아니라 서로 떨어진 컴포넌트였고, 큰 것 여섯 개가 통로입니다. 관측 자료에서 바로 나온 결과입니다.
 
-누구에게. 집값 하위 8개 구의 출근자는 평균 91%의 길을, 상위 8개 구는 67%의 길을 지납니다. 하위 구에서 상위 구로 가는 통행은 전체의 14%인데 과밀의 41%를 겪습니다.
+누구에게. 아침에 나가는 구의 출근자입니다. 집값 하위 8개 구는 평균 91%의 길을, 상위 8개 구는 67%의 길을 지납니다. 이것은 통행을 경로에 실은 모형의 결과이고, 모형은 실측 혼잡도와 순위상관 0.86으로 맞습니다.
 
-왜. 09시에 승객은 정점의 62%로 줄었는데 혼잡도는 108%입니다. 열차가 9대에서 7.2대로 먼저 빠지기 때문입니다.
+왜. 09시에 승객은 정점의 62%로 줄었는데 혼잡도는 108%입니다. 열차가 먼저 빠지기 때문입니다.
 
-세 답은 한곳을 가리킵니다. 통로 여섯 곳의 09시입니다. 그러면 무엇을 바꿔야 하는지 보겠습니다. (1:00)</aside>
+그래서 정책 질문의 답은 "충분하지 않다"입니다. 세 답은 한곳을 가리킵니다. 통로 여섯 곳의 09시입니다. (1:10)</aside>
 </section>
 <!-- ===== 16. 해결 방향 ===== -->
-<section class="dark" data-no="16">
-<p class="lab">04. 결론</p><h2>해결 방향</h2>
-<p class="say">사람만 옮겨서는 풀리지 않는다.<br><b>열차 감축을 늦춰야</b> 옮긴 사람이 풀린다.</p>
-<div class="facts"><div><b>증회는 정점을 내렸다</b><br>증회 노선 08:00 칸 −8.0%p. 그러나 같은 노선의 09:00 칸은 −0.4%p</div><div><b>사람만 옮기면 −11%</b><br>두 배를 옮겨도 −11%. 옮겨 갈 09:00 칸이 이미 차 있다</div><div><b>그래서 순서를 바꾼다</b><br>받는 칸을 먼저 열고, 그다음에 사람을 옮긴다</div></div>
-<div class="memo"><span><b>16장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 19쪽 (어두운 바탕에 문장 하나)</span><span><b>채울 것</b> 없음</span></div>
-<aside class="notes">증회는 실패한 정책이 아닙니다. 150%를 지켰습니다. 다만 정점 한 칸에만 닿았습니다. 사람을 옮기는 정책은 옮겨 갈 칸이 비어 있어야 통합니다. 그래서 순서를 바꿉니다. (1:20)</aside>
+<section class="" data-no="16">
+<p class="lab">04. 결론 · 해결 방향</p>
+<h2>사람만 옮겨서는 풀리지 않고, 09시 열차를 유지해야 옮긴 효과가 난다</h2>
+<div class="body"><div class="row" style="gap:64px">
+<div style="width:900px"><p class="cap"><b>표 2.</b> 이동 비율과 09:00 열차 유지 범위에 따른 과밀 변화</p>
+<table style="font-size:28px"><tr><th style="text-align:left">09:00 열차 유지 범위</th><th class="num">이동 없음</th><th class="num">15% 이동</th><th class="num">30% 이동</th></tr>
+<tr><td class="t">유지 없음 (지금)</td><td class="num">0%</td><td class="num"><span class="hl">−11%</span></td><td class="num"><span class="hl">−11%</span></td></tr>
+<tr><td class="t">병목 통로 6곳만</td><td class="num">−8%</td><td class="num">−25%</td><td class="num">−31%</td></tr>
+<tr><td class="t">전 구간</td><td class="num">−13%</td><td class="num">−32%</td><td class="num">−45%</td></tr></table>
+<p class="note">값은 08:00 칸과 09:00 칸의 과밀 분 합계 변화. 이동은 통로마다 좁은 쪽 역 이용자가 08:00에서 09:00으로 옮기는 비율이고, 15%와 30%는 가정이다 (해외 실적 1.5~8%). 유지는 09:00 칸 열차 수를 08:00 수준으로 두는 것.</p></div>
+<div style="flex:1"><p class="sub">표에서 읽히는 것</p>
+<ol class="obs"><li>사람만 옮기면 두 배를 옮겨도 −11%에서 멈춘다. 옮겨 갈 09:00 칸이 이미 차 있다.</li><li>09:00 열차를 유지한 행에서만, 더 옮길수록 더 풀린다.</li><li>기존 증회는 정점에만 닿았다. 증회 노선의 08:00 칸은 −8.0%p, 같은 노선의 09:00 칸은 −0.4%p.</li></ol>
+<p class="key" style="margin-top:10px">받는 칸을 먼저 열고, 그다음에 사람을 옮긴다.</p></div>
+</div></div>
+<div class="memo"><span><b>16장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 19쪽 (해법 방향 한 문장), 버스 중앙차로 14쪽 (표로 대비)</span><span><b>채울 것</b> 없음</span></div>
+<aside class="notes">그러면 무엇을 바꾸면 풀리는지, 두 가지를 바꿔 가며 계산했습니다. 옮기는 사람의 비율과, 09시에 유지하는 열차의 범위입니다.
+
+첫 행을 보시면, 열차를 그대로 두고 사람만 옮기면 15%를 옮기든 30%를 옮기든 11%에서 멈춥니다. 옮겨 갈 09시 칸이 이미 차 있기 때문입니다. 열차를 유지한 행에서만 더 옮길수록 더 풀립니다.
+
+증회는 실패한 정책이 아닙니다. 150%를 지켰습니다. 다만 정점 한 칸에만 닿았습니다. 그래서 순서를 바꿉니다. 받는 칸을 먼저 열고, 그다음에 사람을 옮깁니다. (1:20)</aside>
 </section>
 <!-- ===== 17. 솔루션 1: 09:00 열차 감축을 늦춘다 ===== -->
 <section class="" data-no="17">
-<p class="lab">04. 결론</p>
-<h2>솔루션 1: 09:00 열차 감축을 늦춘다</h2>
-<div class="body"><div class="row" style="align-items:stretch">
-<div class="card w" style="flex:1"><p class="sub">무엇을 하는가</p>
-<table><tr><td class="t">대상</td><td>병목 통로 6곳(구간 17개)의 09:00 칸</td></tr><tr><td class="t">방법</td><td>08:00 칸의 열차 수를 09:00 칸까지 유지한다</td></tr><tr><td class="t">필요한 양</td><td>30분당 평균 <b>2.1대</b></td></tr><tr><td class="t">단독 효과</td><td>통로만 유지 <b>−8%</b>, 전 구간 유지 −13% <span class="s">(08:00 + 09:00 과밀 합계)</span></td></tr></table>
-<p class="key" style="margin-top:20px">새 전동차를 사는 것이 아니라, 달리던 열차를 30분 더 달리게 한다</p>
-<p class="s" style="margin-top:10px">근거: 09:00 칸에 정원을 넘는 23개 구간은 평균 119%이고, 열차를 유지하면 84%</p></div>
-<div style="width:760px"><div class="ph" style="height:420px">그림 자리: 통로의 시간대별 열차 수 계단 그래프<br>(지금의 감축 시각과 30분 늦춘 감축 시각)</div>
-<table style="margin-top:16px"><tr><th>통로 (가장 붐비는 구간)</th><th>08:00</th><th>09:00</th></tr><tr><td class="t">7호선 군자 → 어린이대공원</td><td class="n">10대</td><td class="n">7대</td></tr><tr><td class="t">4호선 한성대입구 → 혜화</td><td class="n">10대</td><td class="n">7대</td></tr><tr><td class="t">8호선 강동구청 → 몽촌토성</td><td class="n">7대</td><td class="n">5대</td></tr></table></div>
+<p class="lab">04. 결론 · 솔루션 1</p>
+<h2>솔루션 1: 병목 통로 여섯 곳에서 09시 열차 감축을 30분 늦춘다</h2>
+<div class="body"><div class="row" style="gap:64px">
+<div style="flex:1"><p class="cap"><b>표 3.</b> 솔루션 1의 내용</p>
+<table style="font-size:26px"><tr><td class="t" style="width:170px">대상</td><td>병목 통로 6곳(구간 17개)의 09:00 칸</td></tr><tr><td class="t">방법</td><td>08:00 칸의 열차 수를 09:00 칸까지 유지</td></tr><tr><td class="t">필요한 양</td><td>30분당 평균 2.1대</td></tr><tr><td class="t">단독 효과</td><td>과밀 −8% (전 구간에서 유지하면 −13%)</td></tr></table>
+<p class="note">근거: 09:00 칸에 정원을 넘는 23개 구간은 평균 혼잡도 119%이고, 08:00 열차 수를 유지하면 84%가 된다.</p>
+<p class="key" style="margin-top:22px">새 전동차를 들이는 일이 아니라, 운행 중인 열차의 감축 시각을 바꾸는 일이다.</p></div>
+<div style="width:760px"><p class="cap"><b>표 4.</b> 통로에서 가장 붐비는 구간의 30분당 열차 수</p>
+<table style="font-size:26px"><tr><th style="text-align:left">구간</th><th class="num">08:00</th><th class="num">09:00</th></tr><tr><td>7호선 군자 → 어린이대공원</td><td class="num">10대</td><td class="num">7대</td></tr><tr><td>4호선 한성대입구 → 혜화</td><td class="num">10대</td><td class="num">7대</td></tr><tr><td>8호선 강동구청 → 몽촌토성</td><td class="num">7대</td><td class="num">5대</td></tr></table>
+<div class="ph" style="height:250px;margin-top:22px">그림 자리: 통로의 시간대별 열차 수 (지금의 감축 시각과 30분 늦춘 감축 시각)</div></div>
 </div></div>
-<div class="memo"><span><b>17장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 21쪽 (조건을 항목으로 나눠 적기), 22쪽 (기존 자원 활용)</span><span><b>채울 것</b> 열차 수 계단 그래프</span></div>
-<aside class="notes">새 전동차를 사는 것이 아니라, 이미 달리던 열차를 30분 더 달리게 하는 것입니다. 통로 여섯 곳에서 30분당 평균 2대입니다. (1:10)</aside>
+<div class="memo"><span><b>17장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 21쪽 (조건을 항목으로 나눠 적기), 22쪽 (기존 자원 활용)</span><span><b>채울 것</b> 열차 수 그림</span></div>
+<aside class="notes">첫 번째 솔루션은 열차입니다. 병목 통로 여섯 곳에서 09시 열차 감축을 30분 늦춥니다. 30분당 평균 2대입니다. 새 전동차를 들이는 일이 아니라, 이미 달리던 열차의 감축 시각을 바꾸는 일입니다. (1:10)</aside>
 </section>
 <!-- ===== 18. 솔루션 2: 통로마다 좁은 쪽을 겨냥해 옮긴다 ===== -->
 <section class="" data-no="18">
-<p class="lab">04. 결론</p>
-<h2>솔루션 2: 통로마다 좁은 쪽을 겨냥해 옮긴다</h2>
-<div class="body"><div class="row">
-<div><img class="fig" src="images/fig05_net_effect.png" width="900" height="533" alt="떠난 칸만 센 효과와 순효과"><p class="s" style="margin-top:10px">과밀 감소(%). 왼쪽 둘은 떠난 08:00 칸만, 오른쪽 셋은 도착한 09:00 칸까지 합친 순효과</p></div>
-<div style="flex:1"><p class="sub">누구에게 권하는가</p>
-<ul><li>2호선 사당→교대: <b>도착 쪽</b> (선릉, 역삼, 강남, 삼성, 교대)</li><li>나머지 통로: <b>출발 쪽</b> (예: 4호선은 쌍문, 수유, 길음, 미아사거리, 상계)</li></ul>
-<div class="card" style="margin:18px 0"><p>아침 통행의 <b>2.48%</b>를 옮기면 08:00 과밀 <b>−27.5%</b></p><p class="s" style="margin:0">같은 인원을 모든 역에서 고르게 옮기면 −13.2% (2.1배)</p></div>
-<p class="key">단, 지금 열차로는 순효과 −11%</p><p class="s">솔루션 1이 먼저여야 하는 이유다. 좁은 쪽 이용자의 15%가 옮긴다는 것은 가정이다 (해외 실적 1.5~8%)</p></div>
+<p class="lab">04. 결론 · 솔루션 2</p>
+<h2>솔루션 2: 통로마다 좁은 쪽 역의 이용자에게 시차 출근을 권한다</h2>
+<div class="body"><div class="row" style="gap:56px">
+<div><img class="fig" src="images/fig05_net_effect.png" width="880" height="521" alt="떠난 칸만 센 효과와 순효과"><p class="note"><b style="color:#111">그림 1.</b> 과밀 감소(%). 왼쪽 둘은 떠난 08:00 칸만, 오른쪽 셋은 도착한 09:00 칸까지 합친 순효과.</p></div>
+<div style="flex:1"><p class="cap"><b>표 5.</b> 통로별로 권하는 대상</p>
+<table style="font-size:25px"><tr><th style="text-align:left">통로</th><th style="text-align:left">좁은 쪽</th><th style="text-align:left">대상 역 (상위 5곳)</th></tr><tr><td>2호선 사당 → 교대</td><td>도착</td><td>선릉, 역삼, 강남, 삼성, 교대</td></tr><tr><td>4호선 성신여대입구 → 동대문</td><td>출발</td><td>쌍문, 수유, 길음, 미아사거리, 상계</td></tr><tr><td>그 밖의 통로</td><td>출발 (7호선 중곡→건대입구는 비슷)</td><td>통로마다 다름</td></tr></table>
+<p style="margin-top:22px">아침 통행의 2.48%를 옮기면 08:00 과밀이 <b>27.5%</b> 준다. 같은 인원을 모든 역에서 고르게 옮기면 13.2%다.</p>
+<p class="note">지금 열차로는 순효과가 −11%에 그친다. 솔루션 1과 함께 써야 한다.</p></div>
 </div></div>
 <div class="memo"><span><b>18장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 22쪽 (대상 지역을 짚어 적용), 구릉지 16쪽 (후보지별 추천)</span><span><b>채울 것</b> 없음</span></div>
-<aside class="notes">누구에게나 권하는 시차 출근이 아니라, 통로마다 어느 역 사람에게 권할지를 정하는 것입니다. (1:00)</aside>
+<aside class="notes">두 번째 솔루션은 사람입니다. 누구에게나 권하는 시차 출근이 아니라, 통로마다 어느 역 이용자에게 권할지를 정합니다. 2호선 통로는 도착역인 강남 쪽, 4호선 통로는 출발역인 쌍문, 수유 쪽입니다. 같은 인원을 고르게 옮길 때보다 두 배 효과가 납니다. (1:00)</aside>
 </section>
 <!-- ===== 19. 기대효과 및 한계점 ===== -->
 <section class="" data-no="19">
-<p class="lab">04. 결론</p>
-<h2>기대효과 및 한계점</h2>
-<div class="body"><p class="sub">기대효과</p>
-<div class="row" style="margin-bottom:24px;align-items:stretch">
-<div class="card" style="flex:1"><p class="key">과밀 감소</p><p class="big">−25%</p><p class="s" style="margin:0">통로 6곳만 열차를 유지하고 좁은 쪽의 15%가 옮길 때. 전 구간 유지면 −32%. 사람만 옮기면 −11%</p></div>
-<div class="card" style="flex:1"><p class="key">형평</p><p class="big">0.41 → 0.80</p><p class="s" style="margin:0">60분 안에 출발을 늦춰 정원 초과를 피할 수 있는 비율, 하위 8개 구. 상위 8개 구는 0.72 → 0.95</p></div>
-<div class="card" style="flex:1"><p class="key">실행 가능성</p><p class="big" style="font-size:56px;padding:16px 0">새 전동차 없이</p><p class="s" style="margin:0">이미 운행 중인 열차의 감축 시각만 바꾼다. 2027년 증차 전에 할 수 있다</p></div></div>
-<p class="sub">한계점</p>
-<ul style="font-size:26px"><li>아침 통행은 하루치 OD에서 추정한 값이고, 9호선·신분당선·코레일은 혼잡도 자료가 없다</li><li>15% 이동은 가정이다. 감축을 늦추는 비용은 계산하지 않았다</li><li>형평 효과는 같은 통행이 모든 출발 칸에 있다고 둔 계산이라 방향만 말한다</li></ul>
-<div class="band c" style="margin-top:18px;padding:18px"><p class="key">150%라는 최댓값 하나로는 보이지 않던 혼잡이다. 통로 여섯 곳의 09시부터 고친다</p></div></div>
-<div class="memo"><span><b>19장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 구릉지 18쪽 (기대효과와 한계점을 한 장에), 화장실 23쪽 (일반화)</span><span><b>채울 것</b> 일반화 한 줄 (다른 도시, 버스, 퇴근 시간)</span></div>
-<aside class="notes">150%라는 최댓값 하나로는 보이지 않던 혼잡입니다. 통로 여섯 곳의 09시 시간표를 고치면, 가장 붐비는 길을 지나던 사람들부터 풀립니다. 감사합니다. (1:10)</aside>
+<p class="lab">04. 결론 · 기대효과 및 한계점</p>
+<h2>두 솔루션을 함께 쓰면 과밀이 25% 줄고, 새 전동차 없이 할 수 있다</h2>
+<div class="body"><div class="row" style="gap:64px">
+<div style="flex:1"><p class="sub">기대효과</p>
+<table style="font-size:26px"><tr><th style="text-align:left">항목</th><th style="text-align:left">값</th><th style="text-align:left">조건</th></tr>
+<tr><td class="t">과밀 감소</td><td><span class="hl">−25%</span></td><td>통로 6곳만 열차 유지, 좁은 쪽 15% 이동 (전 구간 유지면 −32%)</td></tr>
+<tr><td class="t">사람만 옮길 때</td><td>−11%</td><td>열차 유지 없음. 비교 기준</td></tr>
+<tr><td class="t">피할 수 있는 비율</td><td>0.41 → 0.80</td><td>집값 하위 8개 구. 60분 안에 출발을 늦춰 정원 초과를 피하는 통행의 비율 (상위 8개 구 0.72 → 0.95)</td></tr>
+<tr><td class="t">추가 차량</td><td>없음</td><td>운행 중인 열차의 감축 시각만 바꾼다. 2027년 증차 전에 가능</td></tr></table></div>
+<div style="width:700px"><p class="sub">한계점</p>
+<ol class="obs" style="font-size:25px"><li>아침 통행은 하루치 OD에서 추정했고, 9호선·신분당선·코레일은 혼잡도 자료가 없다.</li><li>15% 이동은 가정이다. 감축을 늦추는 비용은 계산하지 않았다.</li><li>피할 수 있는 비율은 같은 통행이 모든 출발 칸에 있다고 둔 계산이라 방향만 말한다.</li></ol></div>
+</div>
+<div class="band" style="margin-top:26px"><p class="key">150%라는 최댓값 하나로는 보이지 않던 혼잡이다. 통로 여섯 곳의 09시부터 고친다.</p></div>
+</div>
+<div class="memo"><span><b>19장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 구릉지 18쪽 (기대효과와 한계점을 한 장에), 화장실 23쪽 (일반화)</span><span><b>채울 것</b> 일반화 한 줄 (선택)</span></div>
+<aside class="notes">두 솔루션을 함께 쓰면 과밀이 25% 줄어듭니다. 사람만 옮길 때의 11%와 비교되는 값입니다. 새 전동차는 필요하지 않습니다.
+
+한계도 있습니다. 아침 통행은 추정값이고, 15% 이동은 가정이며, 비용은 계산하지 않았습니다.
+
+150%라는 최댓값 하나로는 보이지 않던 혼잡입니다. 통로 여섯 곳의 09시부터 고치면, 가장 붐비는 길을 지나던 사람들부터 풀립니다. 감사합니다. (1:10)</aside>
 </section>
 <!-- ===== 20. 참고자료 ===== -->
 <section class="" data-no="20">
@@ -488,6 +518,69 @@ body.shownotes #notes{display:block}
 <aside class="notes"></aside>
 </section>
 </div>
+<style id="academic">
+/* ===== 학술 발표 스타일 (STYLE_PROMPT.md 참고). 이 블록을 지우면 이전 모양으로 돌아간다 ===== */
+section{color:#1a1a1a;background:#fff linear-gradient(#1a1a1a,#1a1a1a) no-repeat 96px 178px / 1728px 2px;font-feature-settings:"tnum" 1;letter-spacing:-0.005em}
+section::before{content:"150%를 달성한 뒤에 남은 혼잡 · 소셜 네트워크 과학";position:absolute;left:96px;top:auto;bottom:22px;width:auto;height:auto;background:none;font-size:18px;color:#8a8a8a}
+section::after{content:attr(data-no);position:absolute;right:96px;bottom:22px;font-size:18px;color:#8a8a8a}
+.lab{top:34px;font-size:20px;color:#6b6b6b;letter-spacing:.04em}
+h2{top:66px;font-size:46px;line-height:1.22;font-weight:700;color:#111;width:1440px;letter-spacing:-0.02em}
+.tabs{top:40px;right:96px;gap:0}
+.tabs span{font-size:20px;padding:0 0 2px 0;margin-left:22px;border:0;border-radius:0;color:#a3a3a3;background:none}
+.tabs span.on{background:none;color:#111;font-weight:700;border-bottom:2px solid #111}
+.sub{font-size:26px;font-weight:700;color:#111;border-left:0;padding-left:0;margin:0 0 12px 0}
+.pill{background:none;color:#1f3a5f;font-size:24px;font-weight:700;padding:0 0 4px 0;border-radius:0;border-bottom:2px solid #1f3a5f;margin:0 0 16px 0}
+.card,.card.w{background:none;border:0;border-top:2px solid #1a1a1a;border-radius:0;padding:18px 4px 0 4px}
+.band{background:none;border-radius:0;border-top:1px solid #1a1a1a;border-bottom:1px solid #1a1a1a;padding:18px 4px}
+.s{color:#555}
+.big{font-size:72px;font-weight:700;color:#111;letter-spacing:-0.02em}.big.r{color:#a61b1b}
+.hl{background:none;padding:0;font-weight:700;color:#a61b1b}
+.key{font-size:30px;color:#111}
+table{border-top:2.5px solid #1a1a1a;border-bottom:2.5px solid #1a1a1a}
+th{background:none;color:#111;font-weight:700;border:0;border-bottom:1.5px solid #1a1a1a;padding:9px 14px}
+td{background:none;border:0;border-bottom:1px solid #e3e3e3;padding:9px 14px}
+tr:last-child td{border-bottom:0}
+td.t{background:none;color:#111;font-weight:700}
+img.fig{border:0;border-radius:0;background:#fff}
+.ph{border:1.5px dashed #9a9a9a;border-radius:0;background:none;color:#777;font-size:22px}
+.arrow{font-size:40px;color:#1a1a1a}
+.goal{width:300px;height:auto;min-height:200px;border-radius:0;background:none;color:#111;border:2px solid #1a1a1a;font-size:28px}
+.goal *{color:inherit!important}
+.cover{background:#fff;color:#111}.cover::before,.cover::after{display:none}
+.cover{background-image:linear-gradient(#1a1a1a,#1a1a1a);background-repeat:no-repeat;background-position:120px 300px;background-size:1680px 3px}
+.cover .k{top:232px;font-size:28px;color:#555;letter-spacing:.04em}
+.cover h1{top:340px;font-size:78px;font-weight:700;line-height:1.3;letter-spacing:-0.02em;color:#111}
+.cover .q{top:640px;font-size:36px;color:#333}
+.cover .team{right:auto;left:120px;bottom:96px;text-align:left;font-size:28px;color:#333}
+.dark{background:#fff linear-gradient(#1a1a1a,#1a1a1a) no-repeat 96px 178px / 1728px 2px;color:#1a1a1a}
+.dark::before,.dark::after{display:block}.dark .lab{color:#6b6b6b}.dark h2{color:#111}
+.dark .say{left:96px;top:250px;width:1728px;font-size:58px;line-height:1.4;color:#111}.dark .say b{color:#a61b1b}
+.dark .facts{left:96px;top:600px;width:1728px;gap:40px}
+.dark .facts div{border-top:2px solid #1a1a1a;color:#333;font-size:26px}.dark .facts b{color:#111}
+.toc .no{color:#111;border-bottom:2px solid #1a1a1a;font-weight:700}.toc h3{color:#111;font-size:36px}.toc p{color:#444;font-size:26px}.toc div{text-align:left}
+.memo{left:0;background:#f4f4f4;border-top:1px solid #bdbdbd;color:#555;z-index:3;height:56px;font-size:20px}.memo b{color:#222}
+.body [style*="border-radius"]:not([style*="50%"]){border-radius:0!important}
+/* 표·그림 번호와 주석 */
+.cap{font-size:22px;color:#333;margin:0 0 8px 0}.cap b{color:#111}
+.note{font-size:20px;color:#666;margin:8px 0 0 0;line-height:1.45}
+td.num,th.num{text-align:right;white-space:nowrap}
+.fin td{padding:14px 14px;vertical-align:middle}.fin .a{font-size:28px;font-weight:700;color:#111}.fin .v{font-size:30px;font-weight:700;color:#111;white-space:nowrap}
+.obs{counter-reset:o;list-style:none;padding:0;margin:0}.obs li{counter-increment:o;padding:0 0 14px 46px;position:relative;margin:0}.obs li::before{content:"(" counter(o) ")";position:absolute;left:0;top:0;color:#555}
+/* 순서도(.fc)와 데이터 가공 장: 색 면을 줄이고 선으로 구분 */
+.fc .bx,.fc-q,.fc-eq,.fc-q2,.fc-lab,.fc-how,.fc-m,.fc-tag{border-radius:0!important}
+.fc .bx{border:1.5px solid #1a1a1a}
+.fc-tag{background:none;color:#111;border-bottom:1.5px solid #1a1a1a}
+.fc-circle{background:none;color:#111;border:2px solid #1a1a1a}
+.fc-note,.fc-note b{color:#333}
+.fc-q,.fc-q2{background:#f2f2f2}.fc-q b{color:#a61b1b}
+.fc-eq{background:#1a1a1a}.fc-eq .f,.fc-eq .c{color:#fff}
+.fc-lab,.fc-cap .fc-lab{background:#f2f2f2;color:#111;border:0}
+.fc-how,.fc-cap .fc-how{border:1px solid #9a9a9a}
+.fc-m,.fc-cap .fc-m{border:1.5px solid #1a1a1a;background:#fff}.fc-m b,.fc-cap .fc-m b{color:#111}
+.fc-ar,.fc-dn{color:#1a1a1a}.fc-lh div{color:#111;border-bottom:1.5px solid #1a1a1a}
+.body span[style*="background:#c9d7e4"]{background:none!important;color:#111!important;padding:0!important}
+.body .card[style*="border-top:10px"]{border-top:2px solid #1a1a1a!important}
+</style>
 <div id="notes"></div>
 <div id="bar"><button id="prev">← 이전</button><button id="next">다음 →</button><span id="pos"></span><span class="sp"></span><span>← → 이동 · N 대본 · M 작업 메모 · F 전체 화면 · 숫자 + Enter 로 이동</span><button id="nb">대본 (N)</button><button id="fs">전체 화면 (F)</button></div>
 <script>
