@@ -658,7 +658,7 @@ body.shownotes #notes{display:block}
 <div class="row" style="gap:48px;flex:1;min-height:0">
 <div><img class="fig" src="images/fig08_flow_vs_congestion.png" width="740" height="438" alt="병목 구간의 혼잡도와 승객 지수"><p class="pq-fn">병목 구간 평균 · 08:00 = 100으로 둔 승객 지수와 30분당 열차 수 · 혼잡도 = 타는 사람 ÷ (열차 수 × 정원)</p></div>
 <div class="pq-side" style="gap:16px">
-<div class="pq-st"><p class="n" style="font-size:60px">119→84<small>%</small></p><p class="l">09:00 정원 초과 23구간 평균<br>열차를 08:00 수준으로 유지 시</p></div>
+<div class="pq-st"><p class="n" style="font-size:60px">119→84<small>%</small></p><p class="l">09:00 정원 초과 23구간 평균<br>열차를 08:00 수준으로 유지 시</p><p class="pq-fn" style="margin:12px 0 0 0;word-break:keep-all">※ 23구간 = 09:00 칸 혼잡도가 100% 이상인 구간.<br>병목 23구간(08:00 칸 130% 이상)과는 기준이 다른 집합이다.<br>84%는 이 구간들에 08:00 칸의 열차 수를 그대로 둔 계산값이다.</p></div>
 <div class="res"><span class="tag">결과</span><p>09시 혼잡 = 시간표의 몫</p><p class="sub">승객은 줄어도 열차가 함께 줄어 정원 초과 지속</p></div>
 <p class="pq-fn" style="margin:0"><b>대조군</b> 2024 상반기 4호선만 증회: 08:00 칸 −24.6%p(다른 노선 −0.5%p) · 같은 통로 09:00 칸 105 → 103%</p>
 </div>
@@ -678,36 +678,13 @@ body.shownotes #notes{display:block}
 <div class="band" style="margin-top:14px;padding:14px 24px"><p class="s" style="margin:0 0 2px 0;font-size:21px">정책 질문: 노선별 최고 혼잡도 하나로 관리하면 충분한가</p><p class="key" style="font-size:28px">충분하지 않다. 최고 혼잡도는 이 그림의 한 칸만 본다.</p></div>
 </div>
 <div class="memo"><span><b>18장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 17쪽 (발견 세 개를 한 문장으로 묶기)</span><span><b>채울 것</b> 없음</span></div>
-<aside class="notes">통로를 찾았으니, 그 통로를 채우는 사람들이 어디서 오고 어디로 가는지 봤습니다. 통로를 지나는 승객이 어느 역에서 타고 어느 역에서 내리는지 세어, 더 몰린 쪽의 역 다섯 곳을 병목의 손잡이라고 부르겠습니다. 병목 22구간 중 14곳은 타는 쪽이 몰려 있고, 6곳은 내리는 쪽이 몰려 있습니다. 예를 들어 4호선 통로는 승객의 47%가 쌍문, 수유 같은 다섯 역에서 탑니다. 반대로 2호선 통로는 47%가 선릉, 강남 같은 다섯 역에서 내립니다. 같은 130%라도 손댈 곳이 정반대라는 뜻입니다. 한쪽이 반대쪽보다 1.15배 넘게 클 때만 그쪽으로 판정했고, 두 쪽이 비슷한 7호선 통로를 빼거나 양쪽 다 넣어도 결론은 바뀌지 않았습니다. (0:55)</aside>
-</section>
-<!-- ===== 16. 최종 결과 ===== -->
-<section class="" data-no="19">
-<p class="lab">04. 결론 · 최종 결과</p>
-<h2>남은 혼잡은 통로 여섯 곳, 아침에 나가는 구의 출근자, 09시 시간표에 있다</h2><div class="tabs"><span class="on">어디에</span><span class="on">누구에게</span><span class="on">언제</span></div>
-<div class="body">
-<p class="cap"><b>표 1.</b> 세 질문의 답 (평일 08:00 칸 기준, 2026-09)</p>
-<table class="fin" style="font-size:25px">
-<tr><th style="width:150px;text-align:left">질문</th><th style="text-align:left">답</th><th style="width:300px;text-align:left">분석 수준</th><th style="width:300px;text-align:left">근거의 종류</th><th style="width:420px;text-align:left">핵심 수치</th></tr>
-<tr><td class="t">어디에</td><td><span class="a">서로 떨어진 통로 여섯 곳</span><br><span class="s">위치는 선로 구조가 아니라 통행이 정한다</span></td><td>중시 (컴포넌트)</td><td>관측</td><td><span class="v">23개 구간</span><br><span class="s">컴포넌트 9개 중 큰 6개</span></td></tr>
-<tr><td class="t">누구에게</td><td><span class="a">아침에 나가는 구의 출근자</span><br><span class="s">역이 아니라 지나는 경로로 잰 혼잡</span></td><td>거시 (집단 사이의 흐름)</td><td>모형<br><span class="s">실측과 순위상관 0.86</span></td><td><span class="v">91% 대 67%</span><br><span class="s">평균 혼잡도, 집값 하위 8개 구 대 상위 8개 구</span></td></tr>
-<tr><td class="t">언제</td><td><span class="a">승객보다 열차가 먼저 빠져서</span><br><span class="s">혼잡도를 승객과 열차 수로 나눠 본 결과</span></td><td>시간 (가중치의 변화)</td><td>관측</td><td><span class="v">승객 62, 혼잡도 108%</span><br><span class="s">09:00 칸. 08:00 승객 = 100</span></td></tr>
-</table>
-<p class="note">관측: 실측 혼잡도와 시간표에서 직접 계산. 모형: 아침 통행을 가장 빠른 경로에 실은 값. 통로: 2호선 사당→교대, 4호선 성신여대입구→동대문, 7호선 중곡→건대입구, 7호선 철산→가산디지털단지, 8호선 천호→잠실, 3호선 홍제→경복궁.</p>
-<div class="row" style="margin-top:26px;gap:56px">
-<div style="flex:1.25"><p class="sub">정책 질문에 대한 답</p><p class="s" style="margin:0 0 6px 0">노선별 최고 혼잡도 하나로 관리하면 충분한가</p><p class="key">충분하지 않다. 최고 혼잡도는 구간 하나의 한 시점만 보는 미시 지표다.</p></div>
-<div style="flex:1"><p class="sub">세 답이 겹치는 곳</p><p class="s" style="margin:0 0 6px 0">위치, 사람, 시간을 함께 보면</p><p class="key">통로 여섯 곳의 09시</p></div>
-</div>
-</div>
-<div class="memo"><span><b>19장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 17쪽 (발견 세 개를 한 문장으로 묶기)</span><span><b>채울 것</b> 없음</span></div>
-<aside class="notes">처음에 던진 질문으로 돌아가겠습니다. 150%를 달성한 뒤에 남은 혼잡은 어디에, 누구에게, 언제 남았는가.
- 
-어디에. 130%를 넘는 구간 23개는 한 덩어리가 아니라 서로 떨어진 컴포넌트였고, 큰 것 여섯 개가 통로입니다. 관측 자료에서 바로 나온 결과입니다.
- 
-누구에게. 아침에 나가는 구의 출근자입니다. 집값 하위 8개 구는 평균 91%의 길을, 상위 8개 구는 67%의 길을 지납니다. 이것은 통행을 경로에 실은 모형의 결과이고, 모형은 실측 혼잡도와 순위상관 0.86으로 맞습니다.
- 
-언제. 09시에 승객은 정점의 62%로 줄었는데 혼잡도는 108%입니다. 열차가 먼저 빠지기 때문입니다.
- 
-그래서 정책 질문의 답은 "충분하지 않다"입니다. 세 답은 한곳을 가리킵니다. 통로 여섯 곳의 09시입니다. (1:10)</aside>
+<aside class="notes">처음에 던진 질문으로 돌아가겠습니다. 150%를 달성한 뒤에 남은 혼잡은 어디에, 누구에게, 언제 남았는가. 세 답을 그림 한 장에 모았습니다.
+
+어디에. 행이 병목 통로 여섯 곳입니다. 130%를 넘는 구간은 한 덩어리가 아니라 서로 떨어져 있었습니다.
+언제. 열이 30분 칸입니다. 08시 칸이 가장 진하지만, 주황 테두리의 09시 칸을 보시면 승객은 줄었는데 열차도 같이 줄어 색이 남아 있습니다.
+누구에게. 오른쪽 막대는 그 통로를 지나는 통행이 어디서 출발했는지입니다. 통로마다 다릅니다.
+
+그래서 정책 질문의 답은 충분하지 않다입니다. 노선별 최고 혼잡도는 이 그림의 한 칸만 봅니다. 그러면 나머지 칸은 어떻게 풀어야 하는지 보겠습니다. (1:00)</aside>
 </section>
 <!-- ===== 17. 해결 방향 ===== -->
 <section class="" data-no="20">
@@ -735,12 +712,12 @@ body.shownotes #notes{display:block}
 .x16 td small.sm{display:block;font-size:19px;color:#66727f;margin-top:4px}
 </style>
 <p class="lab">04. 결론 · 해결 방향</p>
-<h2>통로를 골라, 좁은 쪽 사람을, 열차가 남아 있는 칸으로 옮겨야 한다</h2><div class="tabs"><span class="on">어디에</span><span class="on">누구에게</span><span class="on">언제</span></div>
+<h2>통로를 골라, 손잡이 쪽 사람을, 열차가 남아 있는 칸으로 옮겨야 한다</h2><div class="tabs"><span class="on">어디에</span><span class="on">누구에게</span><span class="on">언제</span></div>
 <div class="body"><div class="x16">
 <table>
 <tr><th>축</th><th style="width:320px">질문의 답 (앞 장)</th><th>기존 해법이 닿지 못한 곳</th></tr>
 <tr><td class="ax">어디에<small>중시</small></td><td>혼잡은 서로 떨어진<br>통로 여섯 곳에 있다</td><td class="old"><b>증회</b>는 노선 단위,<br><b>시차 출근 환급</b>은 노선을 가리지 않는다</td></tr>
-<tr><td class="ax">누구에게<small>거시</small></td><td>병목 구간마다<br>좁은 쪽이 다르다<small class="sm">22곳 중 출발 쪽 14, 도착 쪽 6, 비슷 2</small></td><td class="old"><b>시차 출근 환급</b>은<br>역을 가리지 않고 똑같이 준다</td></tr>
+<tr><td class="ax">누구에게<small>거시</small></td><td>병목 구간마다<br>손잡이(좁은 쪽)가 다르다<small class="sm">22곳 중 출발 쪽 14, 도착 쪽 6, 비슷 2</small></td><td class="old"><b>시차 출근 환급</b>은<br>역을 가리지 않고 똑같이 준다</td></tr>
 <tr><td class="ax">언제<small>시간</small></td><td>09:00에 승객보다<br>열차가 먼저 빠진다</td><td class="old"><b>증회</b>는 08:00 정점 한 칸에만 넣었다<small class="sm">09:00 칸은 −0.4%p</small></td></tr>
 </table>
 <svg width="1728" height="620" viewBox="0 0 1728 620" fill="none" stroke="#16324f" stroke-width="1.5" stroke-linecap="square">
@@ -748,11 +725,11 @@ body.shownotes #notes{display:block}
 <path d="M912,138 H956 M912,478 H956 M956,138 V478"/><path d="M912,308 H1010" marker-end="url(#a20)"/>
 <path d="M1330,308 H1362 M1362,176 V436"/><path d="M1362,176 H1390" marker-end="url(#a20)"/><path d="M1362,436 H1390" marker-end="url(#a20)"/>
 </svg>
-<div class="cond"><p class="t">해법이 갖춰야 할 조건</p><p>통로를 골라서</p><p>좁은 쪽 사람을</p><p>열차가 남아 있는 칸으로</p></div>
+<div class="cond"><p class="t">해법이 갖춰야 할 조건</p><p>통로를 골라서</p><p>손잡이 쪽 사람을</p><p>열차가 남아 있는 칸으로</p></div>
 <div class="sol" style="top:62px"><p class="n">솔루션 1 · 열차 (어디에 + 언제)</p><p class="h">통로의 09:00 열차<br>감축을 늦춘다</p><p class="d">받는 칸을 먼저 연다.<br>30분당 평균 2.1대</p></div>
-<div class="sol" style="top:322px"><p class="n">솔루션 2 · 사람 (어디에 + 누구에게)</p><p class="h">통로마다 좁은 쪽 역<br>이용자를 옮긴다</p><p class="d">그다음에 사람을 옮긴다.<br>고르게 옮길 때의 2.1배</p></div>
+<div class="sol" style="top:322px"><p class="n">솔루션 2 · 사람 (어디에 + 누구에게)</p><p class="h">통로마다 손잡이 역<br>이용자를 옮긴다</p><p class="d">그다음에 사람을 옮긴다.<br>고르게 옮길 때의 2.1배</p></div>
 <div class="ev"><span>사람만 옮기면 <b>−11%</b></span><span>열차만 유지하면 <b>−8%</b></span><span>함께 하면 <b class="hot">−25%</b></span></div>
-<p class="evn">08:00 칸과 09:00 칸의 과밀 분 합계 변화. 통로 6곳 기준이고, 좁은 쪽 역 이용자의 15%가 09:00으로 옮긴다는 가정이다 (해외 실적 1.5~8%).</p>
+<p class="evn">08:00 칸과 09:00 칸의 과밀 분 합계 변화. 통로 6곳 기준이고, 손잡이 역 이용자의 15%가 09:00으로 옮긴다는 가정이다 (해외 실적 1.5~8%).</p>
 </div></div>
 <div class="memo"><span><b>20장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 19쪽 (해법 방향 한 문장), 버스 중앙차로 14쪽 (기존과 본 연구 대비)</span><span><b>채울 것</b> 없음</span></div>
 <aside class="notes">앞 장의 세 축을 그대로 가져왔습니다. 축마다 기존 해법이 닿지 못한 곳이 있습니다.
@@ -761,7 +738,7 @@ body.shownotes #notes{display:block}
 누구에게. 통로마다 몰리는 역이 다른데, 환급은 역을 가리지 않고 똑같았습니다.
 언제. 09시에 열차가 먼저 빠지는데, 증회는 08시 정점 한 칸에만 들어갔습니다.
 
-그래서 해법의 조건은 세 가지를 한 번에 갖추는 것입니다. 통로를 골라서, 좁은 쪽 사람을, 열차가 남아 있는 칸으로 옮깁니다. 이 조건에서 솔루션 두 가지가 나옵니다. 열차와 사람입니다.
+그래서 해법의 조건은 세 가지를 한 번에 갖추는 것입니다. 통로를 골라서, 손잡이 쪽 사람을, 열차가 남아 있는 칸으로 옮깁니다. 이 조건에서 솔루션 두 가지가 나옵니다. 열차와 사람입니다.
 
 따로 하면 사람만은 11%, 열차만은 8%입니다. 함께 하면 25%입니다. (1:20)</aside>
 </section>
@@ -799,7 +776,8 @@ body.shownotes #notes{display:block}
 <tr><td class="ax">누구에게</td><td class="old">구분하지 않는다</td><td class="new">09:00에 통로를 지나는 승객<small>솔루션 2로 옮겨 올 사람을 받는 칸이 된다</small></td></tr>
 <tr><td class="ax sub">수단</td><td class="old">예비열차 증회,<br>신규 전동차 증차</td><td class="new">운행 중인 열차의 감축 시각 변경<small>30분당 평균 2.1대. 새 전동차는 필요 없다</small></td></tr>
 <tr><td class="ax sub">효과</td><td class="old">08:00 칸 −8.0%p,<br>09:00 칸 −0.4%p<small>증회 노선의 실측</small></td><td class="new">08:00·09:00 칸 과밀 −8%<small>모형 계산. 09:00 정원 초과 23개 구간 평균 119% → 84%</small></td></tr>
-</table></div>
+</table>
+<p class="note" style="margin-top:8px;text-wrap:wrap">※ "감축을 30분 늦춘다"는 08:00 칸의 열차 수를 09:00 칸까지 유지하는 것으로 계산했다.<br>※ 09:00 정원 초과 23개 구간은 09:00 칸 100% 이상인 구간이다. 병목 23구간(08:00 칸 130% 이상)과는 기준이 다르다.<br>※ 증회 효과는 2022-12 → 2023-12 비교다. 증회하지 않은 노선은 08:00 칸 +1.7%p, 09:00 칸 +2.2%p였다.</p></div>
 <div class="R"><p class="cap"><b>표 4.</b> 통로에서 가장 붐비는 구간의 30분당 열차 수</p>
 <table>
 <tr><th style="text-align:left">구간</th><th class="num">08:00</th><th class="num">09:00<br>지금</th><th class="num">09:00<br>솔루션 1</th></tr>
@@ -853,13 +831,13 @@ body.shownotes #notes{display:block}
 .x22 .prior p.s2{font-size:18px;color:#66727f}
 </style>
 <p class="lab">04. 결론 · 솔루션 2</p>
-<h2>솔루션 2: 통로마다 좁은 쪽 역의 이용자에게 시차 출근을 권한다</h2><div class="tabs"><span class="on">어디에</span><span class="on">누구에게</span><span>언제</span></div>
+<h2>솔루션 2: 통로마다 손잡이 역의 이용자에게 시차 출근을 권한다</h2><div class="tabs"><span class="on">어디에</span><span class="on">누구에게</span><span>언제</span></div>
 <div class="body"><div class="x22">
 <div class="L"><p class="cap"><b>표 5.</b> 기존 시차 출근 정책과 솔루션 2의 차이</p>
 <table>
 <tr><th></th><th>기존 정책 (시차 출근 환급)</th><th class="new">솔루션 2</th></tr>
 <tr><td class="ax">어디에</td><td class="old">지역과 노선을<br>가리지 않는다</td><td class="new">병목 통로 6곳을 지나는 통행<small>통로를 지나지 않는 통행은 옮겨도 효과가 없다</small></td></tr>
-<tr><td class="ax">누구에게</td><td class="old">이용자 누구나<br>같은 추가 환급</td><td class="new">통로마다 좁은 쪽의 상위 5개 역 이용자<small>2호선은 내리는 역, 4호선은 타는 역이다</small></td></tr>
+<tr><td class="ax">누구에게</td><td class="old">이용자 누구나<br>같은 추가 환급</td><td class="new">통로마다 손잡이(좁은 쪽 상위 5개 역) 이용자<small>2호선은 내리는 역, 4호선은 타는 역이다</small></td></tr>
 <tr><td class="ax">언제</td><td class="old">09:00~10:00 등<br>지정 시간대에 탈 때<small>그 시간대의 열차 수는 다루지 않는다</small></td><td class="new">08:00 칸에서 09:00 칸으로<small>솔루션 1로 열차를 유지한 칸이다</small></td></tr>
 <tr><td class="ax sub">수단</td><td class="old">환급률 30%p 추가</td><td class="new">같은 권고와 인센티브를 대상 역에 집중<small>새 제도가 아니라 대상을 좁히는 일이다</small></td></tr>
 <tr><td class="ax sub">효과</td><td class="old">08:00 칸 과밀 −13.2%<small>같은 인원을 모든 역에서<br>고르게 옮길 때</small></td><td class="new">08:00 칸 과밀 −27.5%, 2.1배<small>모형 계산. 아침 통행의 2.48%를 옮길 때</small></td></tr>
@@ -867,7 +845,7 @@ body.shownotes #notes{display:block}
 <p class="note" style="margin-top:8px;text-wrap:wrap">기존 정책: 모두의 카드(K-패스) 시차 출퇴근 환급률 확대 (2026-04-01 시행).<br>오전 적용 시간은 05:30~06:30과 09:00~10:00이다. 출처: 서울시 「내 손안에 서울」.</p></div>
 <div class="R"><p class="cap"><b>표 6.</b> 통로별로 권하는 대상</p>
 <table>
-<tr><th>통로</th><th style="white-space:nowrap">좁은 쪽</th><th>대상 역 (상위 5곳)</th></tr>
+<tr><th>통로</th><th style="white-space:nowrap">좁은 쪽</th><th>손잡이 (상위 5개 역)</th></tr>
 <tr><td class="cr">2호선 사당 → 교대</td><td class="hot">도착</td><td>선릉, 역삼, 강남, 삼성, 교대</td></tr>
 <tr><td class="cr">4호선 성신여대입구 → 동대문</td><td class="d">출발</td><td>쌍문, 수유, 길음, 미아사거리, 상계</td></tr>
 <tr><td class="cr">7호선 중곡 → 건대입구</td><td class="d">비슷</td><td>상봉, 사가정, 면목, 군자, 하계</td></tr>
@@ -887,10 +865,10 @@ body.shownotes #notes{display:block}
 <aside class="notes">두 번째 솔루션은 사람입니다. 이번에는 기존 시차 출근 정책과 나란히 놓겠습니다.
 
 어디에. 기존 정책은 지역과 노선을 가리지 않습니다. 솔루션 2는 병목 통로 여섯 곳을 지나는 통행만 봅니다.
-누구에게. 기존 정책은 이용자 누구에게나 같은 추가 환급을 줍니다. 솔루션 2는 통로마다 좁은 쪽의 상위 다섯 역 이용자에게 권합니다. 오른쪽 표처럼 2호선 통로는 내리는 역인 강남 쪽, 4호선 통로는 타는 역인 쌍문, 수유 쪽입니다.
+누구에게. 기존 정책은 이용자 누구에게나 같은 추가 환급을 줍니다. 솔루션 2는 통로마다 병목의 손잡이, 즉 좁은 쪽의 상위 다섯 역 이용자에게 권합니다. 오른쪽 표처럼 2호선 통로는 내리는 역인 강남 쪽, 4호선 통로는 타는 역인 쌍문, 수유 쪽입니다.
 언제. 기존 정책도 09시대에 타면 환급을 더 줍니다. 그런데 그 시간대의 열차 수는 다루지 않습니다. 솔루션 2는 솔루션 1로 열차를 유지해 둔 09시 칸으로 옮깁니다.
 
-효과는 두 배입니다. 같은 인원을 고르게 옮기면 08시 과밀이 13% 줄고, 좁은 쪽을 겨냥하면 27% 줍니다.
+효과는 두 배입니다. 같은 인원을 고르게 옮기면 08시 과밀이 13% 줄고, 손잡이를 겨냥하면 27% 줍니다.
 
 다만 지금 열차로는 옮겨 간 09시 칸이 다시 차서 순효과가 11%에 그칩니다. 솔루션 1과 함께 써야 25%가 됩니다. (1:00)</aside>
 </section>
@@ -925,7 +903,7 @@ body.shownotes #notes{display:block}
 <g fill="none" stroke="#16324f" stroke-width="1.5"><circle cx="400" cy="195" r="192" /><circle cx="285" cy="365" r="192" /><circle cx="515" cy="365" r="192" /></g>
 <g text-anchor="middle" fill="#16324f">
 <text x="400" y="62" font-size="30" font-weight="700">어디에</text><text x="400" y="92" font-size="20" fill="#4d5b6a">병목 통로 6곳</text>
-<text x="222" y="440" font-size="30" font-weight="700">누구에게</text><text x="222" y="470" font-size="20" fill="#4d5b6a">좁은 쪽 역 이용자</text>
+<text x="222" y="440" font-size="30" font-weight="700">누구에게</text><text x="222" y="470" font-size="20" fill="#4d5b6a">손잡이 역 이용자</text>
 <text x="578" y="440" font-size="30" font-weight="700">언제</text><text x="578" y="470" font-size="20" fill="#4d5b6a">09:00 칸</text>
 <text x="296" y="228" font-size="20" font-weight="700" fill="#2166c4">솔루션 2</text><text x="296" y="258" font-size="26" font-weight="700">−11%</text>
 <text x="504" y="228" font-size="20" font-weight="700" fill="#2166c4">솔루션 1</text><text x="504" y="258" font-size="26" font-weight="700">−8%</text>
@@ -936,7 +914,7 @@ body.shownotes #notes{display:block}
 <table>
 <tr><th>축</th><th>솔루션이 바꾸는 것</th><th>기대효과</th></tr>
 <tr><td class="ax">어디에</td><td class="what"><b>솔루션 1 · 2 공통</b>병목 통로 6곳에만 적용한다</td><td class="eff">새 전동차 없음</td></tr>
-<tr><td class="ax">누구에게</td><td class="what"><b>솔루션 2 · 사람</b>좁은 쪽 역 이용자를 옮긴다</td><td class="eff">−11%</td></tr>
+<tr><td class="ax">누구에게</td><td class="what"><b>솔루션 2 · 사람</b>손잡이 역 이용자를 옮긴다</td><td class="eff">−11%</td></tr>
 <tr><td class="ax">언제</td><td class="what"><b>솔루션 1 · 열차</b>09:00 칸까지 열차 수를 유지한다</td><td class="eff">−8%</td></tr>
 <tr class="em"><td class="ax">세 축 함께</td><td class="what"><b>해결 순서</b>받는 칸을 먼저 열고, 사람을 옮긴다</td><td class="eff hot">−25%</td></tr>
 </table>
@@ -949,14 +927,14 @@ body.shownotes #notes{display:block}
 </dl></div>
 </div>
 </div>
-<p class="note" style="margin-top:6px">08:00 칸과 09:00 칸의 과밀 분 합계 변화, 모형 계산. 통로 6곳 기준, 좁은 쪽 역 이용자의 15% 이동 가정. 이동 비율 30%면 −31%, 전 구간 열차 유지면 −32%.</p>
+<p class="note" style="margin-top:6px">08:00 칸과 09:00 칸의 과밀 분 합계 변화, 모형 계산. 통로 6곳 기준, 손잡이 역 이용자의 15% 이동 가정. 이동 비율 30%면 −31%, 전 구간 열차 유지면 −32%.</p>
 <div class="band" style="margin-top:12px;padding:14px 24px"><p style="margin:0">정책 질문의 답: 최고 혼잡도 하나가 아니라 <b>어디에 · 누구에게 · 언제</b>를 함께 봐야 남은 혼잡이 풀린다.</p></div>
 </div>
 <div class="memo"><span><b>23장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 구릉지 18쪽 (기대효과와 한계점을 한 장에), 화장실 23쪽 (일반화)</span><span><b>채울 것</b> 없음</span></div>
 <aside class="notes">마지막으로 기대효과를 처음의 세 축으로 정리하겠습니다.
 
 어디에. 두 솔루션 모두 병목 통로 여섯 곳에만 적용합니다. 그래서 새 전동차가 필요 없습니다. 30분당 평균 2대의 감축 시각만 바꿉니다.
-누구에게. 좁은 쪽 역 이용자만 옮기면 과밀이 11% 줍니다.
+누구에게. 손잡이 역 이용자만 옮기면 과밀이 11% 줍니다.
 언제. 09시 칸의 열차만 유지하면 8% 줍니다.
 
 세 축을 함께 쓰면 25%입니다. 따로 쓴 효과를 더한 19%보다 큽니다. 받는 칸을 먼저 열어야 옮긴 효과가 나기 때문입니다.
