@@ -724,14 +724,14 @@ body.shownotes #notes{display:block}
 <tr><td class="ax">누구에게<small>거시</small></td><td>병목 구간마다<br>손잡이(좁은 쪽)가 다르다<small class="sm">22곳 중 출발 쪽 14, 도착 쪽 6, 비슷 2</small></td><td class="old"><b>시차 출근 환급</b>은<br>역을 가리지 않고 똑같이 준다</td></tr>
 <tr><td class="ax">언제<small>시간</small></td><td>09:00에 승객보다<br>열차가 먼저 빠진다</td><td class="old"><b>증회</b>는 08:00 정점 한 칸에만 넣었다<small class="sm">09:00 칸은 −0.4%p</small></td></tr>
 </table>
-<svg width="1728" height="620" viewBox="0 0 1728 620" fill="none" stroke="#16324f" stroke-width="1.5" stroke-linecap="square">
+<svg width="1728" height="640" viewBox="0 0 1728 640" fill="none" stroke="#16324f" stroke-width="2" stroke-linecap="square">
 <defs><marker id="a20" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,1 L10,5 L0,9 z" fill="#16324f" stroke="none"/></marker></defs>
-<path d="M912,138 H956 M912,478 H956 M956,138 V478"/><path d="M912,308 H1010" marker-end="url(#a20)"/>
-<path d="M1330,308 H1362 M1362,176 V436"/><path d="M1362,176 H1390" marker-end="url(#a20)"/><path d="M1362,436 H1390" marker-end="url(#a20)"/>
+<path d="M878,151 H908 M878,523 H908 M908,151 V523"/><path d="M878,337 H936" marker-end="url(#a20)"/>
+<path d="M1288,337 H1312 M1312,187 V481"/><path d="M1312,187 H1336" marker-end="url(#a20)"/><path d="M1312,481 H1336" marker-end="url(#a20)"/>
 </svg>
 <div class="cond"><p class="t">해법이 갖춰야 할 조건</p><p>통로를 골라서</p><p>손잡이 쪽 사람을</p><p>열차가 남아 있는 칸으로</p></div>
-<div class="sol" style="top:62px"><p class="n">솔루션 1 · 열차 (어디에 + 언제)</p><p class="h">통로의 09:00 열차<br>감축을 늦춘다</p><p class="d">받는 칸을 먼저 연다.<br>30분당 평균 2.1대</p></div>
-<div class="sol" style="top:322px"><p class="n">솔루션 2 · 사람 (어디에 + 누구에게)</p><p class="h">통로마다 손잡이 역<br>이용자를 옮긴다</p><p class="d">그다음에 사람을 옮긴다.<br>고르게 옮길 때의 2.1배</p></div>
+<div class="sol" style="top:56px"><p class="n">솔루션 1 · 열차 (어디에 + 언제)</p><p class="h">통로의 09:00 열차<br>감축을 늦춘다</p><p class="d">받는 칸을 먼저 연다.<br>30분당 평균 2.1대</p></div>
+<div class="sol" style="top:350px"><p class="n">솔루션 2 · 사람 (어디에 + 누구에게)</p><p class="h">통로마다 손잡이 역<br>이용자를 옮긴다</p><p class="d">그다음에 사람을 옮긴다.<br>고르게 옮길 때의 2.1배</p></div>
 <div class="ev"><span>사람만 옮기면 <b>−11%</b></span><span>열차만 유지하면 <b>−8%</b></span><span>함께 하면 <b class="hot">−25%</b></span></div>
 <p class="evn">08:00 칸과 09:00 칸의 과밀 분 합계 변화. 통로 6곳 기준이고, 손잡이 역 이용자의 15%가 09:00으로 옮긴다는 가정이다 (해외 실적 1.5~8%).</p>
 </div></div>
@@ -1023,6 +1023,8 @@ td.num,th.num{text-align:right;white-space:nowrap}
 tr.em td{background:#fdf1ea}
 .obs{counter-reset:o;list-style:none;padding:0;margin:0}.obs li{counter-increment:o;padding:0 0 14px 46px;position:relative;margin:0}.obs li::before{content:"(" counter(o) ")";position:absolute;left:0;top:0;color:#2166c4;font-weight:700}
 </style>
+<style id="fit">
+</style>
 <style id="contrast">
 /* ===== 가독성 보강 (사본 전용). 이 블록을 지우면 이전 모양으로 돌아간다 =====
    원칙: 옅은 바탕의 글상자는 진한 원색 바탕 + 흰 글씨(노랑 바탕만 검은 글씨), 회색 글씨는 진하게, 작은 글씨는 21px 이상 */
@@ -1082,6 +1084,97 @@ section[data-no="9"] svg rect[fill="#fbe9a8"] + circle + rect + line + line + li
 section[data-no="9"] svg rect[fill="#fbe9a8"] + circle + rect + line + line + line + text + text{fill:#000}
 section[data-no="9"] svg rect[rx="17"]{fill:#d9541e;stroke:#d9541e}
 section[data-no="9"] svg rect[rx="17"] + text{fill:#fff}
+</style>
+<style id="fill">
+/* ===== 선으로만 표시하던 상자를 색으로 채움 (사본 전용) ===== */
+section .card:not(.w),section .x6 .sol,section .x16 .sol,section .pq-st,section .mf-s,section .mech .s,section .tl .c,section .prior,section .blk{background:#16324f!important;border-color:#16324f!important;box-sizing:border-box;padding-left:16px!important;padding-right:16px!important;padding-bottom:12px!important}
+section .card:not(.w),section .prior{background:#2166c4!important;border-color:#2166c4!important}
+section .pq-st.r,section .mf-s.r,section .tl .c.hot{background:#d9541e!important;border-color:#d9541e!important}
+section .pq-st.mute{background:#5f7388!important;border-color:#5f7388!important}
+section .card:not(.w),section .card:not(.w) *,section .x6 .sol *,section .x16 .sol *,section .pq-st,section .pq-st *,section .mf-s,section .mf-s *,section .mech .s,section .mech .s *,section .tl .c,section .tl .c *,section .prior,section .prior *,section .blk,section .blk *{color:#fff!important}
+section .pq-st .pp-tool,section .mf-s .pp-tool{border-color:#fff!important;background:transparent!important}
+section .mech .s{padding-top:6px!important;padding-bottom:6px!important}
+section .pq-st .pq-fn{color:#fff!important}
+</style>
+<style id="theme">
+/* ===== 남색 제목 띠 + 스카이라인 배경 + 노란 축 표시 + 로고 자리(우측 하단). 로고 파일을 받으면 khu_logo_placeholder.png만 바꾸면 된다 ===== */
+section:not(.cover){background:url(images/khu_logo_placeholder.png) no-repeat 1756px 1006px / 68px 68px,linear-gradient(#16324f,#16324f) no-repeat 0 0 / 100% 156px,url(images/bg_skyline_faint.png) no-repeat center bottom / 1920px 330px,#fff!important}
+section:not(.cover) .lab{top:28px!important;color:#b9d2f3!important}
+section:not(.cover) h2{top:60px!important;width:1400px!important;color:#fff!important}
+section:not(.cover) .tabs{right:96px!important;top:34px!important}
+section:not(.cover) .tabs span{font-size:26px!important;margin-left:26px!important;color:rgba(255,255,255,.38)!important;font-weight:700!important}
+section:not(.cover) .tabs span.on{color:#ffd21f!important;border-bottom:4px solid #ffd21f!important}
+section:not(.cover)::after{right:182px!important;bottom:26px!important}
+</style>
+<style id="big">
+/* ===== 큰 글씨·채운 상자 샘플 (14, 20, 21장) ===== */
+/* --- 20장 해결 방향 --- */
+section[data-no="20"] .x16{height:812px}
+section[data-no="20"] .x16 table{width:870px;font-size:28px}
+section[data-no="20"] .x16 th{height:58px;font-size:26px}
+section[data-no="20"] .x16 td{height:186px;line-height:1.38}
+section[data-no="20"] .x16 td.ax{width:150px;font-size:34px}
+section[data-no="20"] .x16 td.ax small{font-size:23px!important}
+section[data-no="20"] .x16 td small.sm{font-size:22px!important}
+section[data-no="20"] .x16 .cond{left:944px;top:162px;width:336px;height:350px;padding:0 18px;border:0!important}
+section[data-no="20"] .x16 .cond .t{font-size:23px!important;margin-bottom:14px}
+section[data-no="20"] .x16 .cond p{font-size:30px;margin-bottom:12px}
+section[data-no="20"] .x16 .sol{left:1344px;width:384px;height:262px;box-sizing:border-box;background:#16324f;border:0;padding:20px 20px 0 20px}
+section[data-no="20"] .x16 .sol *{color:#fff!important}
+section[data-no="20"] .x16 .sol .n{font-size:22px!important;margin-bottom:8px}
+section[data-no="20"] .x16 .sol .h{font-size:31px;margin-bottom:10px}
+section[data-no="20"] .x16 .sol .d{font-size:24px!important}
+section[data-no="20"] .x16 .ev{top:636px;padding:18px 24px;gap:56px}
+section[data-no="20"] .x16 .ev span{font-size:30px}
+section[data-no="20"] .x16 .ev b{font-size:40px}
+section[data-no="20"] .x16 .evn{top:738px;font-size:22px!important}
+/* --- 21장 솔루션 1 --- */
+section[data-no="21"] .x21{gap:48px}
+section[data-no="21"] .x21 .L{width:1070px}
+section[data-no="21"] .x21 .cap{font-size:24px}
+section[data-no="21"] .x21 table{font-size:27px}
+section[data-no="21"] .x21 .L th{height:58px;font-size:27px}
+section[data-no="21"] .x21 .L td{height:104px;line-height:1.32}
+section[data-no="21"] .x21 td.ax{font-size:33px;width:150px}
+section[data-no="21"] .x21 td.ax.sub{font-size:27px}
+section[data-no="21"] .x21 td.old{width:350px}
+section[data-no="21"] .x21 small{font-size:21px!important;margin-top:2px}
+section[data-no="21"] .x21 .R table{font-size:25px}
+section[data-no="21"] .x21 .R td:first-child{white-space:nowrap}
+section[data-no="21"] .x21 .R th,section[data-no="21"] .x21 .R td{height:62px}
+section[data-no="21"] .x21 .prior{margin-top:20px;border:0;background:#2166c4;padding:16px 20px}
+section[data-no="21"] .x21 .prior *{color:#fff!important}
+section[data-no="21"] .x21 .prior .t{font-size:23px!important}
+section[data-no="21"] .x21 .prior p{font-size:26px;line-height:1.42}
+section[data-no="21"] .x21 .prior p.s2{font-size:21px!important}
+section[data-no="21"] .x21 .L .note{font-size:20px!important;margin-top:6px!important;line-height:1.36!important}
+section[data-no="21"] .band{margin-top:12px!important;padding:14px 24px!important}
+section[data-no="21"] .band p{font-size:31px}
+/* --- 14장 통로 여섯 곳 --- */
+section[data-no="14"] .pq-side{gap:12px!important}
+section[data-no="14"] .mf-s{background:#16324f;border:0;padding:12px 14px 12px 14px;gap:6px}
+section[data-no="14"] .mf-s.r{background:#d9541e}
+section[data-no="14"] .mf-s *{color:#fff!important}
+section[data-no="14"] .mf-n{font-size:58px}
+section[data-no="14"] .mf-n small{font-size:27px!important}
+section[data-no="14"] .mf-l{font-size:22px;line-height:1.3}
+section[data-no="14"] .pq-cor2{font-size:30px;padding:8px 0;grid-template-columns:112px 1fr auto}
+section[data-no="14"] .pq-cor2 .ln{font-size:26px}
+section[data-no="14"] .pq-cor2 .v{color:#263340}
+section[data-no="14"] .pq-fn{font-size:21px;line-height:1.35}
+section[data-no="14"] .res{padding:12px 20px 14px 20px}
+section[data-no="14"] .res p{font-size:33px}
+section[data-no="14"] .qbig{margin-bottom:12px}
+</style>
+<style id="fit">
+/* ===== 채운 상자 안의 줄바꿈과 여백 맞춤 ===== */
+section .card:not(.w),section .pq-st,section .mf-s,section .mech .s,section .tl .c,section .prior,section .blk,section .sol{word-break:keep-all}
+section .card:not(.w),section .pq-st{padding-left:12px!important;padding-right:12px!important}
+section .mech .s{padding-left:8px!important;padding-right:6px!important;font-size:19px!important;white-space:nowrap}
+section[data-no="16"] .pq-st *{letter-spacing:-0.02em}
+section[data-no="23"] .x23 .R .blk{margin-top:10px!important;padding-top:8px!important;padding-bottom:8px!important}
+section[data-no="23"] .x23 .R dl{row-gap:3px!important}
+section[data-no="23"] .band{margin-top:8px!important;padding:12px 24px!important}
 </style>
 <div id="notes"></div>
 <div id="bar"><button id="prev">← 이전</button><button id="next">다음 →</button><span id="pos"></span><span class="sp"></span><span>← → 이동 · N 대본 · M 작업 메모 · F 전체 화면 · 숫자 + Enter 로 이동</span><button id="nb">대본 (N)</button><button id="fs">전체 화면 (F)</button></div>
