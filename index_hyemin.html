@@ -1023,8 +1023,6 @@ td.num,th.num{text-align:right;white-space:nowrap}
 tr.em td{background:#fdf1ea}
 .obs{counter-reset:o;list-style:none;padding:0;margin:0}.obs li{counter-increment:o;padding:0 0 14px 46px;position:relative;margin:0}.obs li::before{content:"(" counter(o) ")";position:absolute;left:0;top:0;color:#2166c4;font-weight:700}
 </style>
-<style id="fit">
-</style>
 <style id="contrast">
 /* ===== 가독성 보강 (사본 전용). 이 블록을 지우면 이전 모양으로 돌아간다 =====
    원칙: 옅은 바탕의 글상자는 진한 원색 바탕 + 흰 글씨(노랑 바탕만 검은 글씨), 회색 글씨는 진하게, 작은 글씨는 21px 이상 */
@@ -1175,6 +1173,53 @@ section[data-no="16"] .pq-st *{letter-spacing:-0.02em}
 section[data-no="23"] .x23 .R .blk{margin-top:10px!important;padding-top:8px!important;padding-bottom:8px!important}
 section[data-no="23"] .x23 .R dl{row-gap:3px!important}
 section[data-no="23"] .band{margin-top:8px!important;padding:12px 24px!important}
+</style>
+<style id="font">
+/* ===== 글꼴: 교수님 강의 자료와 같은 조합 (본문 넥슨 Lv2 고딕, 제목 나눔스퀘어라운드) ===== */
+@font-face{font-family:'DeckBody';font-weight:400;font-display:swap;src:local('NEXON Lv2 Gothic'),local('넥슨Lv2고딕'),url(https://cdn.jsdelivr.net/npm/@kfonts/nexon-lv2-gothic@0.2.0/NEXON_Lv2_Gothic.woff2) format('woff2')}
+@font-face{font-family:'DeckBody';font-weight:500;font-display:swap;src:local('NEXON Lv2 Gothic Medium'),local('넥슨Lv2고딕 Medium'),url(https://cdn.jsdelivr.net/npm/@kfonts/nexon-lv2-gothic@0.2.0/NEXON_Lv2_Gothic_Medium.woff2) format('woff2')}
+@font-face{font-family:'DeckBody';font-weight:700;font-display:swap;src:local('NEXON Lv2 Gothic Bold'),local('넥슨Lv2고딕 Bold'),url(https://cdn.jsdelivr.net/npm/@kfonts/nexon-lv2-gothic@0.2.0/NEXON_Lv2_Gothic_Bold.woff2) format('woff2')}
+@font-face{font-family:'DeckTitle';font-weight:700;font-display:swap;src:local('NanumSquareRound Bold'),local('나눔스퀘어라운드 Bold'),url(https://cdn.jsdelivr.net/npm/@kfonts/nanum-square-round@0.2.0/NanumSquareRoundB.woff2) format('woff2')}
+@font-face{font-family:'DeckTitle';font-weight:800;font-display:swap;src:local('NanumSquareRound ExtraBold'),local('나눔스퀘어라운드 ExtraBold'),url(https://cdn.jsdelivr.net/npm/@kfonts/nanum-square-round@0.2.0/NanumSquareRoundEB.woff2) format('woff2')}
+body,section,section table,section svg{font-family:'DeckBody','NEXON Lv2 Gothic','Nanum Gothic','Noto Sans KR',sans-serif!important}
+section h2,.cover h1,.cover .t,section .qbig b{font-family:'DeckTitle','NanumSquareRound','DeckBody',sans-serif!important;font-weight:800!important;letter-spacing:-0.01em!important}
+section{letter-spacing:0!important}
+/* 줄바꿈: 단어 중간에서 끊지 않고, 마지막 줄에 한 단어만 남지 않게 */
+section :where(p,td,th,li,dd,dt,div,span,h2,small,b){word-break:keep-all;overflow-wrap:normal}
+section :where(p,td,dd,li,h2){text-wrap:pretty}
+</style>
+<style id="p12">
+/* ===== 12장 과정 ①: STEP 칸을 색으로 채움 ===== */
+section[data-no="12"] .ps{background:#16324f!important;border-color:#16324f!important;padding-left:18px!important;padding-right:18px!important;padding-bottom:14px!important;box-sizing:border-box}
+section[data-no="12"] .ps.r{background:#d9541e!important;border-color:#d9541e!important}
+section[data-no="12"] .ps,section[data-no="12"] .ps *{color:#fff!important}
+section[data-no="12"] .ps svg text{fill:#fff!important}
+section[data-no="12"] .ps .pp-tool{border-color:#fff!important;background:transparent!important}
+</style>
+<style id="zoomfit">
+/* ===== 본문을 화면 여백까지 키움 (장마다 맞춘 배율) ===== */
+section[data-no="2"] .body{left:55.38px!important;top:130.77px!important;width:1366.15px!important;height:643.08px!important;zoom:1.30}
+section[data-no="3"] .body{left:70.59px!important;top:166.67px!important;width:1741.18px!important;height:819.61px!important;zoom:1.02}
+section[data-no="4"] .body{left:64.29px!important;top:151.79px!important;width:1585.71px!important;height:746.43px!important;zoom:1.12}
+section[data-no="5"] .body{left:66.67px!important;top:157.41px!important;width:1644.44px!important;height:774.07px!important;zoom:1.08}
+section[data-no="6"] .body{left:70.59px!important;top:166.67px!important;width:1741.18px!important;height:819.61px!important;zoom:1.02}
+section[data-no="7"] .body{left:67.92px!important;top:160.38px!important;width:1675.47px!important;height:788.68px!important;zoom:1.06}
+section[data-no="8"] .body{left:65.45px!important;top:154.55px!important;width:1614.55px!important;height:760.00px!important;zoom:1.10}
+section[data-no="9"] .body{left:66.67px!important;top:157.41px!important;width:1644.44px!important;height:774.07px!important;zoom:1.08}
+section[data-no="10"] .body{left:69.23px!important;top:163.46px!important;width:1707.69px!important;height:803.85px!important;zoom:1.04}
+section[data-no="11"] .body{left:60.00px!important;top:141.67px!important;width:1480.00px!important;height:696.67px!important;zoom:1.20}
+section[data-no="12"] .body{left:64.29px!important;top:151.79px!important;width:1585.71px!important;height:746.43px!important;zoom:1.12}
+section[data-no="13"] .body{left:65.45px!important;top:154.55px!important;width:1614.55px!important;height:760.00px!important;zoom:1.10}
+section[data-no="14"] .body{left:70.59px!important;top:166.67px!important;width:1741.18px!important;height:819.61px!important;zoom:1.02}
+section[data-no="15"] .body{left:61.02px!important;top:144.07px!important;width:1505.08px!important;height:708.47px!important;zoom:1.18}
+section[data-no="16"] .body{left:63.16px!important;top:149.12px!important;width:1557.89px!important;height:733.33px!important;zoom:1.14}
+section[data-no="17"] .body{left:70.59px!important;top:166.67px!important;width:1741.18px!important;height:819.61px!important;zoom:1.02}
+section[data-no="18"] .body{left:70.59px!important;top:166.67px!important;width:1741.18px!important;height:819.61px!important;zoom:1.02}
+section[data-no="20"] .body{left:70.59px!important;top:166.67px!important;width:1741.18px!important;height:819.61px!important;zoom:1.02}
+section[data-no="21"] .body{left:70.59px!important;top:166.67px!important;width:1741.18px!important;height:819.61px!important;zoom:1.02}
+section[data-no="22"] .body{left:69.23px!important;top:163.46px!important;width:1707.69px!important;height:803.85px!important;zoom:1.04}
+section[data-no="23"] .body{left:67.92px!important;top:160.38px!important;width:1675.47px!important;height:788.68px!important;zoom:1.06}
+section[data-no="24"] .body{left:55.38px!important;top:130.77px!important;width:1366.15px!important;height:643.08px!important;zoom:1.30}
 </style>
 <div id="notes"></div>
 <div id="bar"><button id="prev">← 이전</button><button id="next">다음 →</button><span id="pos"></span><span class="sp"></span><span>← → 이동 · N 대본 · M 작업 메모 · F 전체 화면 · 숫자 + Enter 로 이동</span><button id="nb">대본 (N)</button><button id="fs">전체 화면 (F)</button></div>
