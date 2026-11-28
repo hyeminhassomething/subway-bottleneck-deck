@@ -78,12 +78,15 @@ body.shownotes #notes{display:block}
 -->
 <div id="stage">
 <!-- ===== 1. 표지 ===== -->
-<section class="cover" data-no="1" data-pg="1">
-<p class="k">소셜 네트워크 과학 팀 프로젝트</p>
-<h1>150%를 달성한 뒤에 남은 혼잡<br>서울 지하철 아침 병목의 네트워크 분석</h1>
-<p class="q">어디에, 누구에게, 언제 남았는가</p>
-<p class="team">2026-2 소셜네트워크과학 1팀<br>팀원: 정혜민, 김진현, 김민주, 백수연</p>
-<div class="memo"><span><b>1장</b></span><span><b>담당</b> 공통</span><span><b>레퍼런스</b> 구릉지 1쪽</span><span><b>채울 것</b> 없음</span></div>
+<section class="cover cv2" data-no="1" data-pg="1">
+<div class="ph2"></div>
+<p class="tl">소셜 네트워크 과학 팀 프로젝트</p><p class="tr">PRESENTATION</p>
+<h1><span class="h1l">150%를</span><span class="h1c">달성한 뒤에</span><span class="h1r">남은 혼잡</span></h1>
+<p class="sp">서울시 지하철 아침 병목의 네트워크 분석</p>
+<p class="q2"><b>어디에</b>, <b>누구에게</b>, <b>언제</b> 남았는가</p>
+<p class="tm">2026-2 소셜네트워크과학 1팀<br>팀원: 정혜민, 김진현, 김민주, 백수연</p>
+<p class="cr">사진: 서울시 「내 손안에 서울」</p>
+<img class="lg" src="images/khu_logo.png" alt="경희대학교">
 <aside class="notes">대본 자리. 담당자가 쓴다. 지금 대본은 구글 문서 「발표 종합 자료」 4부 4절에 있다.</aside>
 </section>
 <!-- ===== 2. CONTENTS ===== -->
@@ -1453,6 +1456,27 @@ section[data-no="14"] .no14{width:40px;height:40px;border-radius:50%;background:
 section[data-no="16"] .scsvg circle.rip{fill:#ff4b2b;stroke:#ff4b2b;stroke-width:2;transform-box:fill-box;transform-origin:center;animation:rip16 2s ease-out infinite;pointer-events:none}
 section[data-no="16"] .scsvg circle.rip.r2{animation-delay:1s}
 @keyframes rip16{0%{transform:scale(1);opacity:.75}100%{transform:scale(4.2);opacity:0}}
+</style>
+<style id="cv2">
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/black-han-sans@5.3.0/index.css");
+section.cover.cv2{background:#1b2a4e!important;color:#efe9dc}
+.cv2 .ph2{position:absolute;left:510px;top:-160px;width:900px;height:900px;border-radius:50%;background:url(images/cover_crowd_bw.jpg) center 62%/cover no-repeat;border:40px solid #efe9dc;box-sizing:border-box}
+.cv2 p{margin:0;position:absolute;color:#efe9dc}
+.cv2 h1,.cv2 .tl,.cv2 .tr,.cv2 .sp{font-family:"Black Han Sans","DeckTitle",sans-serif!important;font-weight:400!important}
+.cv2 .tl{left:56px;top:110px;font-size:20px;letter-spacing:.04em}
+.cv2 .tr{right:56px;top:110px;font-size:20px;letter-spacing:.12em}
+.cv2 h1{position:absolute;left:0!important;top:520px!important;width:1920px!important;height:130px;margin:0;font-size:118px!important;line-height:1.1!important;color:#efe9dc!important;white-space:nowrap;letter-spacing:0!important}
+.cv2 h1 span{position:absolute;top:0}
+.cv2 h1 .h1l{right:1356px}
+.cv2 h1 .h1c{left:0;right:0;text-align:center;color:#ffd21f;text-shadow:0 0 18px rgba(0,0,0,.9),0 0 6px rgba(0,0,0,.9)}
+.cv2 h1 .h1r{left:1356px}
+.cv2 .sp{left:0;right:0;top:776px;text-align:center;font-size:28px;letter-spacing:.34em}
+.cv2 .q2{left:0;right:0;top:826px;text-align:center;font-size:42px;font-style:italic;transform:skewX(-8deg)}
+.cv2 .q2 b{color:#ffd21f}
+.cv2 .tm{left:56px;bottom:60px;font-size:26px;line-height:1.5}
+.cv2 .cr{left:56px;bottom:30px;font-size:16px;opacity:.6}
+.cv2 .lg{position:absolute;right:56px;bottom:36px;width:160px}
+.cv2::before,.cv2::after{display:none!important}
 </style>
 <div id="notes"></div>
 <div id="bar"><button id="prev">← 이전</button><button id="next">다음 →</button><span id="pos"></span><span class="sp"></span><span>← → 이동 · N 대본 · M 작업 메모 · F 전체 화면 · 숫자 + Enter 로 이동</span><button id="nb">대본 (N)</button><button id="fs">전체 화면 (F)</button></div>
