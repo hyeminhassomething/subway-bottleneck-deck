@@ -1409,6 +1409,20 @@ section[data-no="17"] .pq-side > .pq-fn{font-size:22px!important;line-height:1.4
 section[data-no="17"] .pq-side{gap:12px!important}
 section[data-no="17"] .pq-st .l .hy17{background:#ffe14d;color:#000!important;padding:1px 8px;line-height:1.55}
 </style>
+<style id="r11">
+/* ===== 11/28 밤 수정 ===== */
+.memo{display:none!important}
+section[data-no="8"] .glowmap .g3 polyline{stroke-width:11!important;stroke-dasharray:30 200}
+section[data-no="8"] .glowmap .g2{filter:blur(7px)!important}
+section.on .hb .l .bar{animation:hbL 4.5s ease-out infinite}
+section.on .hb .r .bar{animation:hbR 4.5s ease-out infinite}
+@keyframes hbL{0%{clip-path:inset(0 0 0 100%)}28%,100%{clip-path:inset(0 0 0 0)}}
+@keyframes hbR{0%{clip-path:inset(0 100% 0 0)}28%,100%{clip-path:inset(0 0 0 0)}}
+section[data-no="16"] .res{background:#16324f!important}
+section[data-no="16"] .res .tag{color:#16324f!important}
+section[data-no="16"] .scsvg circle[fill="#d9541e"]{animation:ptglow 1.4s ease-in-out infinite alternate}
+@keyframes ptglow{from{filter:drop-shadow(0 0 0 rgba(255,90,40,0));stroke-width:2}to{filter:drop-shadow(0 0 9px rgba(255,90,40,1)) drop-shadow(0 0 4px #ffd0b8);stroke-width:4}}
+</style>
 <div id="notes"></div>
 <div id="bar"><button id="prev">← 이전</button><button id="next">다음 →</button><span id="pos"></span><span class="sp"></span><span>← → 이동 · N 대본 · M 작업 메모 · F 전체 화면 · 숫자 + Enter 로 이동</span><button id="nb">대본 (N)</button><button id="fs">전체 화면 (F)</button></div>
 <script>
