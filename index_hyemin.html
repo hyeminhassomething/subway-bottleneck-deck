@@ -496,7 +496,7 @@ body.shownotes #notes{display:block}
 <div class="ps3">
 <div class="ps">
 <p class="no">STEP 1 · 아침 몫 추정</p>
-<p class="t">하루 통행 → 아침 통행</p>
+<p class="t"><span class="hy12">하루 통행 → 아침 통행</span></p>
 <p class="d">역쌍 OD = 하루 합계뿐<br>역별 07~10시 승·하차 총량에 맞춰 조정</p>
 <p class="d"><span class="pp-tool">IPF</span>반복 비례 조정: 출발역 합계 · 도착역 합계를 번갈아 맞춤(200회)</p><p class="d" style="font-size:22px;color:#6b7886">쓴 이유: 시간대별 역쌍 OD 공개 자료 없음</p>
 <div class="bigw"><p class="big">964<span class="ar">→</span>512<small>명</small></p><p class="cap">쌍문 → 충무로 · 하루 → 아침</p></div>
@@ -504,7 +504,7 @@ body.shownotes #notes{display:block}
 <div class="ar2">›</div>
 <div class="ps">
 <p class="no">STEP 2 · 가장 빠른 길</p>
-<p class="t">최단 경로 선택</p>
+<p class="t"><span class="hy12">최단 경로 선택</span></p>
 <p class="d">가중치 = 구간 · 환승 시간</p><p class="d"><span class="pp-tool">Dijkstra</span>출발역에서 가까운 역부터 최단 시간을 차례로 확정하는 최단 경로 알고리즘</p><p class="d" style="font-size:22px;color:#6b7886">쓴 이유: 승객 = 가장 빠른 길 선택 가정</p>
 <svg class="pp-chain vis" width="100%" viewBox="-24 0 584 200">
 <line x1="20" y1="50" x2="540" y2="50" stroke="#00a2d1" stroke-width="8"/>
@@ -519,7 +519,7 @@ body.shownotes #notes{display:block}
 <div class="ar2">›</div>
 <div class="ps r">
 <p class="no">STEP 3 · 구간에 합산</p>
-<p class="t">지나는 구간마다 더하기</p>
+<p class="t"><span class="hy12">지나는 구간마다 더하기</span></p>
 <p class="d">512명 → 길 위 10개 구간에 가산<br>214만 건 합 = <b>구간 부하</b></p>
 <div class="bigw"><p class="big">81,703<small>명</small></p><p class="cap">한성대입구 → 혜화 아침 부하 · 08:00 실측 138%<br>부하 ÷ 자리 ↔ 실측 혼잡도 순위상관 <b>0.86</b> (관측 구간 526개)</p></div>
 </div>
@@ -1394,6 +1394,9 @@ section[data-no="20"] .x16 .ev b,section[data-no="20"] .x16 .ev b.hot{background
 .glowmap .g3{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .glowmap .g3 polyline{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:24 200;animation:g3move 1.8s ease-in-out infinite alternate}
 @keyframes g3move{from{stroke-dashoffset:0}to{stroke-dashoffset:-76}}
+</style>
+<style id="hy12">
+section[data-no="12"] .ps .t .hy12{background:rgba(255,225,77,.78);color:#111!important;padding:2px 10px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 </style>
 <div id="notes"></div>
 <div id="bar"><button id="prev">← 이전</button><button id="next">다음 →</button><span id="pos"></span><span class="sp"></span><span>← → 이동 · N 대본 · M 작업 메모 · F 전체 화면 · 숫자 + Enter 로 이동</span><button id="nb">대본 (N)</button><button id="fs">전체 화면 (F)</button></div>
