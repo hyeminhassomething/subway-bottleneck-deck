@@ -184,7 +184,7 @@ body.shownotes #notes{display:block}
 .x6 .evn{position:absolute;left:0;top:700px;font-size:20px;color:#66727f;margin:0}
 .x6 td.q{font-weight:700;color:#16324f}
 .x6 .cond p.d{white-space:normal;word-break:keep-all;font-size:20px;font-weight:400;color:#4d5b6a;margin-top:10px;line-height:1.45}
-
+ 
 .x6 td,.x6 p,.x6 span{word-break:keep-all;overflow-wrap:normal;text-wrap:balance}
 .x6 td small.sm{display:block;font-size:19px;color:#66727f;margin-top:4px}
 </style>
@@ -248,7 +248,7 @@ body.shownotes #notes{display:block}
 </style>
 <section class="" data-no="7">
 <p class="lab">02. 분석 프로세스</p>
-<h2>순서도</h2>
+<h2>연구 설계: 분석 흐름도</h2>
 <div class="body"><div class="fc">
 <div class="fc-data"><p class="sub">데이터</p><div class="bx">
 <div class="fc-tag">구간별 혼잡도</div>
@@ -457,7 +457,7 @@ body.shownotes #notes{display:block}
 <!-- ===== 10. 네트워크 정의: 두 겹의 망 (모션) ===== -->
 <section class="" data-no="10">
 <p class="lab">02. 분석 프로세스</p>
-<h2>네트워크 정의: 같은 역 위 두 겹의 망</h2>
+<h2>네트워크 정의: 운행망 · 통행망</h2>
 <div class="body"><div class="row" style="gap:40px;height:100%">
 <div class="col" style="width:720px;gap:26px">
 <p class="pq-lead" style="margin:0">아침 출근 시간(07~10시)만 · 수도권 21개 노선</p>
@@ -477,7 +477,7 @@ body.shownotes #notes{display:block}
 <!-- ===== 11. degree 분포 ===== -->
 <section class="" data-no="11">
 <p class="lab">02. 분석 프로세스</p>
-<h2>degree 분포: 선로는 고르고, 사람은 몰림</h2>
+<h2>네트워크 기초 특성: degree 분포</h2>
 <div class="body"><div class="row" style="gap:56px;height:100%;align-items:flex-start">
 <div><img class="fig" src="images/fig02_degree_ccdf.png" width="1100" height="651" alt="degree와 가중 degree의 CCDF"><p class="pq-fn">CCDF: 값이 x 이상인 역의 비율 · 가로 = 값 ÷ 평균(로그 눈금)</p></div>
 <div class="col" style="gap:26px;flex:1">
@@ -493,7 +493,7 @@ body.shownotes #notes{display:block}
 <!-- ===== 12. 과정①: 구간마다 사람 수를 세는 법 ===== -->
 <section class="proc" data-no="12">
 <p class="lab">03. 분석 결과</p>
-<h2>과정 ①: 구간마다 사람 수 세기</h2><div class="tabs"><span class="on">어디에</span><span>누구에게</span><span>언제</span></div>
+<h2>분석 방법: 구간 부하 산출</h2><div class="tabs"><span class="on">어디에</span><span>누구에게</span><span>언제</span></div>
 <div class="body"><div class="col" style="gap:30px;height:100%">
 <p class="pq-lead" style="margin:0">예시: 4호선 쌍문 → 충무로 · 214만 건 모두 같은 계산<br><span style="font-size:24px">왜 쌍문: 4호선 병목 통로 승객의 최다 출발역(10,174명) · 환승 없이 통로 3구간 모두 통과</span></p>
 <div class="ps3">
@@ -536,7 +536,7 @@ body.shownotes #notes{display:block}
 <!-- ===== 13. 병목 위치는 구조가 아니라 통행이 정한다 ===== -->
 <section class="" data-no="13">
 <p class="lab">03. 분석 결과</p>
-<h2>병목 위치: 노선 모양이 아닌 사람의 이동</h2><div class="tabs"><span class="on">어디에</span><span>누구에게</span><span>언제</span></div>
+<h2>분석 결과 1-1. 병목 위치: 구조 지표 대 통행 지표</h2><div class="tabs"><span class="on">어디에</span><span>누구에게</span><span>언제</span></div>
 <div class="body"><div class="col" style="height:100%;gap:0">
 <div class="qbig"><b>어디에</b><span>병목은 망의 어디에</span></div>
 <div class="row" style="gap:40px;flex:1;min-height:0">
@@ -567,7 +567,7 @@ body.shownotes #notes{display:block}
 <!-- ===== 14. 병목은 통로 여섯 곳에 뭉쳐 있다 (과정② 앞부분 포함) ===== -->
 <section class="" data-no="14">
 <p class="lab">03. 분석 결과</p>
-<h2>서로 떨어진 병목 통로 6곳</h2><div class="tabs"><span class="on">어디에</span><span>누구에게</span><span>언제</span></div>
+<h2>분석 결과 1-2. 병목 통로 식별: 연결 성분 분석</h2><div class="tabs"><span class="on">어디에</span><span>누구에게</span><span>언제</span></div>
 <div class="body"><div class="col" style="height:100%;gap:0">
 <div class="qbig"><b>어디에</b><span>병목은 망의 어디에</span></div>
 <div class="row" style="gap:48px;flex:1;min-height:0">
@@ -593,7 +593,7 @@ body.shownotes #notes{display:block}
 <!-- ===== 15. 통로마다 좁은 쪽이 다르다: 병목의 손잡이 (과정② 뒷부분 포함) ===== -->
 <section class="" data-no="15">
 <p class="lab">03. 분석 결과</p>
-<h2>병목의 손잡이: 통로마다 다른 몰림 방향</h2><div class="tabs"><span class="on">어디에</span><span>누구에게</span><span>언제</span></div>
+<h2>분석 결과 1-3. 통로별 수요 집중 방향</h2><div class="tabs"><span class="on">어디에</span><span>누구에게</span><span>언제</span></div>
 <div class="body"><div class="col" style="height:100%;gap:0">
 <div class="qbig"><b>어디에</b><span>병목은 망의 어디에</span></div>
 <div class="row" style="gap:56px;flex:1;min-height:0">
@@ -623,7 +623,7 @@ body.shownotes #notes{display:block}
 <!-- ===== 16. 아침에 빠져나가는 구의 출근자가 더 붐비는 길을 지난다 (과정③ 포함) ===== -->
 <section class="" data-no="16">
 <p class="lab">03. 분석 결과</p>
-<h2>아침에 빠져나가는 구의 출근자 = 더 붐비는 출근길</h2><div class="tabs"><span>어디에</span><span class="on">누구에게</span><span>언제</span></div>
+<h2>분석 결과 2. 집단별 혼잡 노출 비교</h2><div class="tabs"><span>어디에</span><span class="on">누구에게</span><span>언제</span></div>
 <div class="body"><div class="col" style="height:100%;gap:0">
 <div class="qbig"><b>누구에게</b><span>누가 그 병목을 지나나</span></div>
 <div class="row" style="gap:44px;flex:1;min-height:0">
@@ -645,7 +645,7 @@ body.shownotes #notes{display:block}
 <!-- ===== 17. 언제: 09시까지 이어지는 정원 초과 ===== -->
 <section class="" data-no="17">
 <p class="lab">03. 분석 결과</p>
-<h2>09시까지 이어지는 정원 초과: 승객과 함께 줄어든 열차</h2><div class="tabs"><span>어디에</span><span>누구에게</span><span class="on">언제</span></div>
+<h2>분석 결과 3. 시간대별 혼잡 분해</h2><div class="tabs"><span>어디에</span><span>누구에게</span><span class="on">언제</span></div>
 <div class="body"><div class="col" style="height:100%;gap:0">
 <div class="qbig"><b>언제</b><span>언제까지 붐비나</span></div>
 <div class="tl">
@@ -730,7 +730,7 @@ body.shownotes #notes{display:block}
 .x16 .ev{position:absolute;left:0;top:620px;width:1728px;background:#eef4fc;padding:16px 24px;display:flex;align-items:baseline;gap:40px}
 .x16 .ev span{font-size:25px;color:#16324f}.x16 .ev b{font-size:30px}.x16 .ev .hot{color:#d9541e}
 .x16 .evn{position:absolute;left:0;top:700px;font-size:20px;color:#66727f;margin:0}
-
+ 
 .x16 td,.x16 p,.x16 span{word-break:keep-all;overflow-wrap:normal;text-wrap:balance}
 .x16 td small.sm{display:block;font-size:19px;color:#66727f;margin-top:4px}
 </style>
@@ -756,13 +756,13 @@ body.shownotes #notes{display:block}
 </div></div>
 <div class="memo"><span><b>20장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 19쪽 (해법 방향 한 문장), 버스 중앙차로 14쪽 (기존과 본 연구 대비)</span><span><b>채울 것</b> 없음</span></div>
 <aside class="notes">앞 장의 세 축을 그대로 가져왔습니다. 축마다 기존 해법이 닿지 못한 곳이 있습니다.
-
+ 
 어디에. 혼잡은 통로 여섯 곳에 있는데, 증회는 노선 단위였고 시차 출근 환급은 노선을 가리지 않았습니다.
 누구에게. 통로마다 몰리는 역이 다른데, 환급은 역을 가리지 않고 똑같았습니다.
 언제. 09시에 열차가 먼저 빠지는데, 증회는 08시 정점 한 칸에만 들어갔습니다.
-
+ 
 그래서 해법의 조건은 세 가지를 한 번에 갖추는 것입니다. 통로를 골라서, 좁은 쪽 사람을, 열차가 남아 있는 칸으로 옮깁니다. 이 조건에서 솔루션 두 가지가 나옵니다. 열차와 사람입니다.
-
+ 
 따로 하면 사람만은 11%, 열차만은 8%입니다. 함께 하면 25%입니다. (1:20)</aside>
 </section>
 <!-- ===== 18. 솔루션 1: 09:00 열차 감축을 늦춘다 ===== -->
@@ -817,13 +817,13 @@ body.shownotes #notes{display:block}
 </div>
 <div class="memo"><span><b>21장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 21쪽 (조건을 항목으로 나눠 적기), 버스 중앙차로 14쪽 (기존과 본 연구 대비)</span><span><b>채울 것</b> 없음</span></div>
 <aside class="notes">첫 번째 솔루션은 열차입니다. 앞에서 본 기존 증회와 나란히 놓겠습니다.
-
+ 
 어디에. 증회는 노선마다 가장 붐비는 구간 하나를 봤습니다. 솔루션 1은 병목 통로 여섯 곳, 구간 17개만 봅니다.
 언제. 증회는 08시 정점 한 칸이었습니다. 솔루션 1은 09시 칸입니다. 08시 칸의 열차 수를 09시 칸까지 유지합니다.
 누구에게. 09시에 통로를 지나는 승객이고, 다음 솔루션에서 옮겨 올 사람을 받는 칸이 됩니다.
-
+ 
 수단도 다릅니다. 새 전동차가 아니라 운행 중인 열차의 감축 시각을 바꿉니다. 30분당 평균 2대입니다. 오른쪽 표처럼 7호선 군자 구간은 09시에 10대에서 7대로 줄어드는데, 이것을 10대로 둡니다.
-
+ 
 증회는 08시 칸을 8%p 내렸지만 09시 칸은 0.4%p였습니다. 솔루션 1은 모형 계산으로 과밀을 8% 줄입니다. (1:10)</aside>
 </section>
 <!-- ===== 19. 솔루션 2: 통로마다 좁은 쪽을 겨냥해 옮긴다 ===== -->
@@ -885,13 +885,13 @@ body.shownotes #notes{display:block}
 </div>
 <div class="memo"><span><b>22장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 화장실 22쪽 (대상 지역을 짚어 적용), 구릉지 16쪽 (후보지별 추천)</span><span><b>채울 것</b> 없음</span></div>
 <aside class="notes">두 번째 솔루션은 사람입니다. 이번에는 기존 시차 출근 정책과 나란히 놓겠습니다.
-
+ 
 어디에. 기존 정책은 지역과 노선을 가리지 않습니다. 솔루션 2는 병목 통로 여섯 곳을 지나는 통행만 봅니다.
 누구에게. 기존 정책은 이용자 누구에게나 같은 추가 환급을 줍니다. 솔루션 2는 통로마다 좁은 쪽의 상위 다섯 역 이용자에게 권합니다. 오른쪽 표처럼 2호선 통로는 내리는 역인 강남 쪽, 4호선 통로는 타는 역인 쌍문, 수유 쪽입니다.
 언제. 기존 정책도 09시대에 타면 환급을 더 줍니다. 그런데 그 시간대의 열차 수는 다루지 않습니다. 솔루션 2는 솔루션 1로 열차를 유지해 둔 09시 칸으로 옮깁니다.
-
+ 
 효과는 두 배입니다. 같은 인원을 고르게 옮기면 08시 과밀이 13% 줄고, 좁은 쪽을 겨냥하면 27% 줍니다.
-
+ 
 다만 지금 열차로는 옮겨 간 09시 칸이 다시 차서 순효과가 11%에 그칩니다. 솔루션 1과 함께 써야 25%가 됩니다. (1:00)</aside>
 </section>
 <!-- ===== 20. 기대효과 및 한계점 ===== -->
@@ -954,15 +954,15 @@ body.shownotes #notes{display:block}
 </div>
 <div class="memo"><span><b>23장</b></span><span><b>담당</b> 혜민</span><span><b>레퍼런스</b> 구릉지 18쪽 (기대효과와 한계점을 한 장에), 화장실 23쪽 (일반화)</span><span><b>채울 것</b> 없음</span></div>
 <aside class="notes">마지막으로 기대효과를 처음의 세 축으로 정리하겠습니다.
-
+ 
 어디에. 두 솔루션 모두 병목 통로 여섯 곳에만 적용합니다. 그래서 새 전동차가 필요 없습니다. 30분당 평균 2대의 감축 시각만 바꿉니다.
 누구에게. 좁은 쪽 역 이용자만 옮기면 과밀이 11% 줍니다.
 언제. 09시 칸의 열차만 유지하면 8% 줍니다.
-
+ 
 세 축을 함께 쓰면 25%입니다. 따로 쓴 효과를 더한 19%보다 큽니다. 받는 칸을 먼저 열어야 옮긴 효과가 나기 때문입니다.
-
+ 
 한계도 있습니다. 아침 통행은 추정값이고, 15% 이동은 가정이며, 비용은 계산하지 않았습니다. 09시에 정원을 넘는 통로는 여섯 곳 중 네 곳입니다.
-
+ 
 처음의 정책 질문으로 돌아가면, 최고 혼잡도 하나로는 충분하지 않습니다. 어디에, 누구에게, 언제를 함께 봐야 남은 혼잡이 풀립니다. 감사합니다. (1:10)</aside>
 </section>
 <!-- ===== 21. 참고자료 ===== -->
@@ -1069,5 +1069,6 @@ tr.em td{background:#fdf1ea}
 </script>
 </body>
 </html>
+ 
  
  
