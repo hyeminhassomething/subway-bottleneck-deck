@@ -655,7 +655,7 @@ body.shownotes #notes{display:block}
 <div class="row" style="gap:48px;flex:1;min-height:0">
 <div><img class="fig" src="images/fig08_flow_vs_congestion.png" width="880" height="521" alt="병목 구간의 혼잡도와 승객 지수"><p class="pq-fn">병목 구간 평균 · 08:00 = 100으로 둔 승객 지수와 30분당 열차 수 · 혼잡도 = 타는 사람 ÷ (열차 수 × 정원)</p></div>
 <div class="pq-side" style="gap:16px">
-<div class="pq-st"><p class="n n17">119<small>%</small> → 84<small>%</small></p><p class="l">09:00 정원 초과 23구간 평균<br>열차를 08:00 수준으로 유지 시</p><p class="pq-fn" style="margin:12px 0 0 0;word-break:keep-all">※ 23구간 = 09:00 칸 혼잡도가 100% 이상인 구간.<br>병목 23구간(08:00 칸 130% 이상)과는 기준이 다른 집합이다.<br>84%는 이 구간들에 08:00 칸의 열차 수를 그대로 둔 계산값이다.</p></div>
+<div class="pq-st"><p class="n n17">119<small>%</small> → 84<small>%</small></p><p class="l"><span class="hy17">09:00 정원 초과 23구간 평균</span><br><span class="hy17">열차를 08:00 수준으로 유지 시</span></p><p class="pq-fn" style="margin:12px 0 0 0;word-break:keep-all">※ 23구간 = 09:00 칸 혼잡도가 100% 이상인 구간.<br>병목 23구간(08:00 칸 130% 이상)과는 기준이 다른 집합이다.<br>84%는 이 구간들에 08:00 칸의 열차 수를 그대로 둔 계산값이다.</p></div>
 <div class="res"><span class="tag">결과</span><p>09시 혼잡 = 시간표의 몫</p><p class="sub">승객은 줄어도 열차가 함께 줄어 정원 초과 지속</p></div>
 <p class="pq-fn" style="margin:0"><b>대조군</b> 2024 상반기 4호선만 증회: 08:00 칸 −24.6%p(다른 노선 −0.5%p) · 같은 통로 09:00 칸 105 → 103%</p>
 </div>
@@ -1407,6 +1407,7 @@ section[data-no="17"] .res p{font-size:31px!important}
 section[data-no="17"] .res .sub{font-size:23px!important}
 section[data-no="17"] .pq-side > .pq-fn{font-size:22px!important;line-height:1.4!important}
 section[data-no="17"] .pq-side{gap:12px!important}
+section[data-no="17"] .pq-st .l .hy17{background:#ffe14d;color:#000!important;padding:1px 8px;line-height:1.55}
 </style>
 <div id="notes"></div>
 <div id="bar"><button id="prev">← 이전</button><button id="next">다음 →</button><span id="pos"></span><span class="sp"></span><span>← → 이동 · N 대본 · M 작업 메모 · F 전체 화면 · 숫자 + Enter 로 이동</span><button id="nb">대본 (N)</button><button id="fs">전체 화면 (F)</button></div>
